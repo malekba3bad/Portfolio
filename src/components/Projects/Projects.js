@@ -49,8 +49,8 @@ function Projects() {
               isBlog={false}
               title="Employees Information System"
               description="An integrated platform for easily and efficiently searching for bank employees. Search by entering the employee's name, job title, telephone number, or even mobile number and email."
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              // ghLink="https://github.com/soumyajit4419/Editor.io"
+              // demoLink="https://editor.soumya-jit.tech/"              
             />
           </Col>
 
@@ -61,7 +61,7 @@ function Projects() {
               title="Bin Dowal's Bank"
               description="Bin Dowal's Bank website offers a clean, user-friendly interface that focuses on providing access to Islamic microfinance solutions."
               // ghLink="https://github.com/soumyajit4419/Plant_AI"
-              // demoLink="https://plant49-ai.herokuapp.com/"
+              demoLink="https://www.bank-bindowal.com/"
             />
           </Col>
 
