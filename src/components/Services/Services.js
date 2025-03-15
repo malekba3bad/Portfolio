@@ -1,5 +1,5 @@
 import React from "react";
-import "./Services.css"; // Import the CSS file for custom styles
+import "./Services.css"; 
 import "../../style.css";
 
 const Services = () => {
@@ -7,26 +7,26 @@ const Services = () => {
     {
       icon: "🖥️",
       title: "Web Development",
-      description: "We build responsive and user-friendly websites tailored to your business needs.",
-      gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)", // Gradient for card background
+      description: "Build responsive and user-friendly websites tailored to your business needs.",
+      gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)", 
     },
     // {
     //   icon: "📱",
     //   title: "Mobile App Development",
     //   description: "We create cross-platform mobile applications that deliver seamless user experiences.",
-    //   gradient: "linear-gradient(135deg, #ff416c, #ff4b2b)", // Gradient for card background
+    //   gradient: "linear-gradient(135deg, #ff416c, #ff4b2b)", 
     // },
     {
       icon: "🎨",
       title: "UI/UX Design",
-      description: "We design intuitive and visually appealing interfaces to enhance user engagement.",
-      gradient: "linear-gradient(135deg, #00c6ff, #0072ff)", // Gradient for card background
+      description: "Design intuitive and visually appealing interfaces to enhance user engagement.",
+      gradient: "linear-gradient(135deg, #00c6ff, #0072ff)", 
     },
     {
       icon: "🔧",
       title: "Maintenance & Support",
-      description: "We provide ongoing maintenance and support to ensure your systems run smoothly.",
-      gradient: "linear-gradient(135deg, #56ab2f, #a8e063)", // Gradient for card background
+      description: "Provide ongoing maintenance and support to ensure your systems run smoothly.",
+      gradient: "linear-gradient(135deg, #56ab2f, #a8e063)", 
     },
   ];
 
