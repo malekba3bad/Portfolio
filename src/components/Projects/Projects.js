@@ -8,6 +8,7 @@ import logistics from "../../Assets/Projects/logistics.png";
 import AlArab from "../../Assets/Projects/AlArab.png";
 import Radiation from "../../Assets/Projects/Radiation.png";
 import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
+import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
 
 function Projects() {
   return (
@@ -60,6 +61,17 @@ function Projects() {
               isBlog={false}
               title="Employees Information System"
               description="An integrated platform for easily and efficiently searching for bank employees. Search by entering the employee's name, job title, telephone number, or even mobile number and email."
+              // ghLink="https://github.com/soumyajit4419/Editor.io"
+              // demoLink="https://editor.soumya-jit.tech/"              
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={MikroTik}
+              isBlog={false}
+              title="Mikrotik Login Page"
+              description="Design and develop a login page for local MikroTik networks to access the internet using prepaid cards."
               // ghLink="https://github.com/soumyajit4419/Editor.io"
               // demoLink="https://editor.soumya-jit.tech/"              
             />
