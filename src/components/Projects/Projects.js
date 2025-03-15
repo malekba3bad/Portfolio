@@ -3,11 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import bank from "../../Assets/Projects/bank.png";
-import emotion from "../../Assets/Projects/emotion.png";
 import Dalil from "../../Assets/Projects/Dalil.png";
 import logistics from "../../Assets/Projects/logistics.png";
 import AlArab from "../../Assets/Projects/AlArab.png";
 import Radiation from "../../Assets/Projects/Radiation.png";
+import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
 
 function Projects() {
   return (
@@ -21,6 +21,17 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={BinDowalPay}
+              isBlog={false}
+              title="Bin Dowal Pay Wallet"
+              description="The leading online payment gateway in Yemen – secure financial transactions anytime, anywhere."
+              // ghLink="https://github.com/soumyajit4419/Chatify"
+              demoLink="https://bin-dowal-pay-gamma.vercel.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={logistics}

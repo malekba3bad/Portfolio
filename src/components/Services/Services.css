@@ -1,0 +1,68 @@
+/* Services.css */
+
+/* General styles for the services section */
+
+
+.services-section {
+    padding: 206px 20px;
+    /* background-color: #f8f9fa; */
+    text-align: center;
+  }
+  
+  .services-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  /* Container for the service cards */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Styles for each service card */
+  .service-card {
+    width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Icon styles */
+  .service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover .icon {
+    transform: rotate(10deg) scale(1.2);
+  }
+  
+  /* Title styles */
+  .service-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Description styles */
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
