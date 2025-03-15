@@ -10,12 +10,12 @@ const Services = () => {
       description: "We build responsive and user-friendly websites tailored to your business needs.",
       gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)", // Gradient for card background
     },
-    {
-      icon: "📱",
-      title: "Mobile App Development",
-      description: "We create cross-platform mobile applications that deliver seamless user experiences.",
-      gradient: "linear-gradient(135deg, #ff416c, #ff4b2b)", // Gradient for card background
-    },
+    // {
+    //   icon: "📱",
+    //   title: "Mobile App Development",
+    //   description: "We create cross-platform mobile applications that deliver seamless user experiences.",
+    //   gradient: "linear-gradient(135deg, #ff416c, #ff4b2b)", // Gradient for card background
+    // },
     {
       icon: "🎨",
       title: "UI/UX Design",
