@@ -10,6 +10,7 @@ import Radiation from "../../Assets/Projects/Radiation.png";
 import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
 import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
 import movies from "../../Assets/Projects/movie-app.png";
+import Balleghny from "../../Assets/Projects/Balleghny.png";
 
 function Projects() {
   return (
@@ -23,6 +24,17 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Balleghny}
+              isBlog={false}
+              title="Balleghny Dashboard"
+              description="This dashboard system is a modern, responsive web application It provides an intuitive interface for handle employees tasks. The dashboard features secure authentication and real-time data fetching from APIs"
+              
+              
+            />
+          </Col>
+        
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={movies}
