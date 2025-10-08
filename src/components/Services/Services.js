@@ -6,7 +6,7 @@ const Services = () => {
   const services = [
     {
       icon: "🖥️",
-      title: "Web Development",
+      title: "Web Development and Managment",
       description: "Build responsive and user-friendly websites tailored to your business needs.",
       gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)", 
     },
