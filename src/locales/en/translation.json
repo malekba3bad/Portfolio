@@ -86,6 +86,26 @@
       "description": "Provide ongoing maintenance and support to ensure your systems run smoothly."
     }
   },
+  "home2": {
+    "introduction": "LET ME INTRODUCE MYSELF",
+    "intro_bold": "INTRODUCE",
+    "passion": "I fell in love with front-end development and design, and I'm always learning something new, I think… 🎨💻",
+    "fluent": "I am fluent in languages and modern frameworks like",
+    "fluent_bold": "Javascript and React JS.",
+    "interest": "My field of interest lies in crafting beautiful user-friendly interfaces and building seamless web experiences.",
+    "interest_ui": "user-friendly interfaces",
+    "interest_build": "building seamless web experiences.",
+    "designs": "Whenever possible, I love bringing my designs to life using",
+    "designs_bold": "Modern Front-End Libraries",
+    "frameworks": "Frameworks",
+    "react": "React.js,",
+    "uiux": "UI/UX",
+    "principles": "principles to create intuitive and engaging products.",
+    "findme": "FIND ME ON",
+    "connect": "Feel free to",
+    "connect_bold": "connect",
+    "with_me": "with me"
+  },
   "footer": {
     "developed": "Developed by Malek Ba Abbad",
     "copyright": "Copyright ©"
