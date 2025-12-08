@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "resume": "Resume"
+  },
+  "home": {
+    "greeting": "Hi There!",
+    "name": "I'M",
+    "fullName": "MALEK BA ABBAD",
+    "roles": [
+      "Front-End Developer",
+      "UI/UX Designer"
+    ]
+  },
+  "about": {
+    "heading": "Know Who",
+    "headingBold": "I'M",
+    "skillsetHeading": "Professional",
+    "skillsetBold": "Skillset",
+    "toolsHeading": "Tools",
+    "toolsBold": "I use",
+    "description": "Hi Everyone, I am Malek Ba Abbad from Hadhramout, Yemen. I am currently employed as a Front-End developer at Arab WareDoss. I completed my bachelor's in Management Information Systems at Yarmouk University, Jordan, where I also served as the Head of the Yemeni community, actively contributing to its activities and initiatives.",
+    "activities": "Apart from coding, some other activities that I love to do!",
+    "gym": "Go to GYM",
+    "blogs": "Writing Tech Blogs",
+    "games": "Playing Games"
+  },
+  "projects": {
+    "heading": "My Recent",
+    "headingBold": "Works",
+    "description": "Here are a few projects I've worked on recently.",
+    "balleghny": {
+      "title": "Balleghny Dashboard",
+      "description": "This dashboard system is a modern, responsive web application It provides an intuitive interface for handle employees tasks. The dashboard features secure authentication and real-time data fetching from APIs"
+    },
+    "cinema": {
+      "title": "Cinema Club",
+      "description": "A modern, responsive movie discovery web application that helps users explore and find movies based on different criteria. Built with vanilla JavaScript and powered by The Movie Database (TMDB) API."
+    },
+    "binDowal": {
+      "title": "Bin Dowal Pay Wallet",
+      "description": "The leading online payment gateway in Yemen – secure financial transactions anytime, anywhere."
+    },
+    "logistics": {
+      "title": "Bin Dowal Contracting and Logistics",
+      "description": "company specializes in general contracting, focusing on construction, building projects, infrastructure development, roadworks and maintenance, water solutions, and electrical engineering solutions."
+    },
+    "radiation": {
+      "title": "Mukalla Radiation Center",
+      "description": "A streamlined design that provides easy access to critical information about their radiotherapy services."
+    },
+    "dalil": {
+      "title": "Employees Information System",
+      "description": "An integrated platform for easily and efficiently searching for bank employees. Search by entering the employee's name, job title, telephone number, or even mobile number and email."
+    },
+    "mikrotik": {
+      "title": "Mikrotik Login Page",
+      "description": "Design and develop a login page for local MikroTik networks to access the internet using prepaid cards."
+    },
+    "bank": {
+      "title": "Bin Dowal's Bank",
+      "description": "Bin Dowal's Bank website offers a clean, user-friendly interface that focuses on providing access to Islamic microfinance solutions."
+    },
+    "arab": {
+      "title": "Arab Exchange Company",
+      "description": "Offers banking services compliant with Central Bank regulations."
+    }
+  },
+  "services": {
+    "heading": "What",
+    "headingBold": "I offer",
+    "description": "Here are a few projects I've worked on recently.",
+    "webDev": {
+      "title": "Web Development and Managment",
+      "description": "Build responsive and user-friendly websites tailored to your business needs."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Design intuitive and visually appealing interfaces to enhance user engagement."
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "description": "Provide ongoing maintenance and support to ensure your systems run smoothly."
+    }
+  },
+  "footer": {
+    "developed": "Developed by Malek Ba Abbad",
+    "copyright": "Copyright ©"
+  },
+  "common": {
+    "demo": "Demo",
+    "github": "GitHub"
+  }
+}

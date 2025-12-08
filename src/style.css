@@ -741,3 +741,90 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* --------- */
+/* RTL Mode Support */
+/* --------- */
+body.rtl-mode {
+  direction: rtl;
+}
+
+body.rtl-mode .navbar {
+  text-align: right;
+}
+
+body.rtl-mode .home-header {
+  text-align: right;
+}
+
+body.rtl-mode .ms-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+body.rtl-mode .me-3 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
+}
+
+body.rtl-mode .fork-btn {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+body.rtl-mode .fork-btn.ms-auto {
+  margin-left: 0;
+}
+
+body.rtl-mode .home-content {
+  text-align: right;
+}
+
+body.rtl-mode .project-heading {
+  text-align: right;
+}
+
+body.rtl-mode .about-img {
+  float: left;
+}
+
+body.rtl-mode div[style*="textAlign: left"] {
+  text-align: right !important;
+}
+
+body.rtl-mode .footer-copywright h3 {
+  text-align: center;
+}
+
+body.rtl-mode .blockquote {
+  text-align: right;
+  border-right: 3px solid #608BC1;
+  border-left: none;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+body.rtl-mode .language-toggle-btn {
+  margin-right: 15px;
+  margin-left: 0;
+}
+
+body.rtl-mode .project-card {
+  margin: 10px auto;
+}
+
+body.rtl-mode .service-card {
+  text-align: right;
+}
+
+body.rtl-mode p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  body.rtl-mode .ms-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+  }
+}
+

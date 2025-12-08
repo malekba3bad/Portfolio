@@ -6,8 +6,10 @@ import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.svg";
 import Toolstack from "./Toolstack";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
   return (
     <Container fluid className="about-section">
       <Particle />
@@ -22,7 +24,7 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+              {t("about.heading")} <strong className="purple">{t("about.headingBold")}</strong>
             </h1>
             <Aboutcard />
           </Col>
@@ -35,13 +37,13 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
+          {t("about.skillsetHeading")} <strong className="purple">{t("about.skillsetBold")} </strong>
         </h1>
 
         <Techstack />
 
         <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
+          <strong className="purple">{t("about.toolsHeading")}</strong> {t("about.toolsBold")}
         </h1>
         <Toolstack />
 

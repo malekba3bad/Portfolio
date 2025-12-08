@@ -11,25 +11,27 @@ import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
 import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
 import movies from "../../Assets/Projects/movie-app.png";
 import Balleghny from "../../Assets/Projects/Balleghny.png";
+import { useTranslation } from "react-i18next";
 
 function Projects() {
+  const { t } = useTranslation();
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          {t("projects.heading")} <strong className="purple">{t("projects.headingBold")} </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Balleghny}
               isBlog={false}
-              title="Balleghny Dashboard"
-              description="This dashboard system is a modern, responsive web application It provides an intuitive interface for handle employees tasks. The dashboard features secure authentication and real-time data fetching from APIs"
+              title={t("projects.balleghny.title")}
+              description={t("projects.balleghny.description")}
               
               
             />
@@ -39,8 +41,8 @@ function Projects() {
             <ProjectCard
               imgPath={movies}
               isBlog={false}
-              title="Cinema Club"
-              description="A modern, responsive movie discovery web application that helps users explore and find movies based on different criteria. Built with vanilla JavaScript and powered by The Movie Database (TMDB) API."
+              title={t("projects.cinema.title")}
+              description={t("projects.cinema.description")}
               ghLink="https://github.com/malekba3bad/movie-app"
               
             />
@@ -49,8 +51,8 @@ function Projects() {
             <ProjectCard
               imgPath={BinDowalPay}
               isBlog={false}
-              title="Bin Dowal Pay Wallet"
-              description="The leading online payment gateway in Yemen – secure financial transactions anytime, anywhere."
+              title={t("projects.binDowal.title")}
+              description={t("projects.binDowal.description")}
               
               demoLink="https://bin-dowal-pay-gamma.vercel.app/"
             />
@@ -60,8 +62,8 @@ function Projects() {
             <ProjectCard
               imgPath={logistics}
               isBlog={false}
-              title="Bin Dowal Contracting and Logistics"
-              description="company specializes in general contracting, focusing on construction, building projects, infrastructure development, roadworks and maintenance, water solutions, and electrical engineering solutions."
+              title={t("projects.logistics.title")}
+              description={t("projects.logistics.description")}
               
               demoLink="https://bdlogisticsc.com/"
             />
@@ -71,8 +73,8 @@ function Projects() {
             <ProjectCard
               imgPath={Radiation}
               isBlog={false}
-              title="Mukalla Radiation Center"
-              description="A streamlined design that provides easy access to critical information about their radiotherapy services."
+              title={t("projects.radiation.title")}
+              description={t("projects.radiation.description")}
               
               demoLink="https://mrcmed.org/"
             />
@@ -82,8 +84,8 @@ function Projects() {
             <ProjectCard
               imgPath={Dalil}
               isBlog={false}
-              title="Employees Information System"
-              description="An integrated platform for easily and efficiently searching for bank employees. Search by entering the employee's name, job title, telephone number, or even mobile number and email."
+              title={t("projects.dalil.title")}
+              description={t("projects.dalil.description")}
                        
             />
           </Col>
@@ -92,8 +94,8 @@ function Projects() {
             <ProjectCard
               imgPath={MikroTik}
               isBlog={false}
-              title="Mikrotik Login Page"
-              description="Design and develop a login page for local MikroTik networks to access the internet using prepaid cards."
+              title={t("projects.mikrotik.title")}
+              description={t("projects.mikrotik.description")}
                           
             />
           </Col>
@@ -102,8 +104,8 @@ function Projects() {
             <ProjectCard
               imgPath={bank}
               isBlog={false}
-              title="Bin Dowal's Bank"
-              description="Bin Dowal's Bank website offers a clean, user-friendly interface that focuses on providing access to Islamic microfinance solutions."
+              title={t("projects.bank.title")}
+              description={t("projects.bank.description")}
               
               demoLink="https://www.bank-bindowal.com/"
             />
@@ -113,8 +115,8 @@ function Projects() {
             <ProjectCard
               imgPath={AlArab}
               isBlog={false}
-              title="Arab Exchange Company"
-              description="Offers banking services compliant with Central Bank regulations."
+              title={t("projects.arab.title")}
+              description={t("projects.arab.description")}
               
             />
           </Col>

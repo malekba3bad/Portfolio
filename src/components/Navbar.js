@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { FaGithub } from "react-icons/fa";
 // import { ImBlog } from "react-icons/im";
@@ -18,6 +19,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
+  const { t, i18n } = useTranslation();
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -30,6 +32,11 @@ function NavBar() {
   }
 
   window.addEventListener("scroll", scrollHandler);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
+  };
 
   return (
     <Navbar
@@ -56,7 +63,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("navbar.home")}
               </Nav.Link>
             </Nav.Item>
 
@@ -66,7 +73,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("navbar.about")}
               </Nav.Link>
             </Nav.Item>
 
@@ -79,7 +86,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Services
+                {t("navbar.services")}
               </Nav.Link>
             </Nav.Item>
 
@@ -92,7 +99,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                {t("navbar.projects")}
               </Nav.Link>
             </Nav.Item>
 
@@ -102,7 +109,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t("navbar.resume")}
               </Nav.Link>
             </Nav.Item>
 
@@ -124,6 +131,16 @@ function NavBar() {
               >
                 <FaGithub style={{ fontSize: "1.2em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1.1em" }} />
+              </Button>
+            </Nav.Item>
+
+            <Nav.Item style={{ marginLeft: "15px" }}>
+              <Button
+                onClick={toggleLanguage}
+                className="language-toggle-btn"
+                variant="dark"
+              >
+                {i18n.language === "en" ? "العربية" : "English"}
               </Button>
             </Nav.Item>
           </Nav>

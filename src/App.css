@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+/* Language Toggle Button */
+.language-toggle-btn {
+  background-color: #608BC1 !important;
+  border-color: #608BC1 !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.language-toggle-btn:hover {
+  background-color: #133E87 !important;
+  border-color: #133E87 !important;
+  transform: translateY(-2px);
+}
+
+.language-toggle-btn:focus {
+  box-shadow: none !important;
+  background-color: #133E87 !important;
+  border-color: #133E87 !important;
+}
