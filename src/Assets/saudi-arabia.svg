@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" width="64" height="40" role="img" aria-label="Saudi Arabia flag">
+  <rect width="64" height="40" fill="#007a3d" />
+  <!-- stylized white emblem: sword-like shape -->
+  <g fill="#fff" transform="translate(8,8)">
+    <rect x="0" y="18" width="48" height="3" rx="1.5" />
+    <path d="M6 18 C16 6, 32 6, 42 18" stroke="#fff" stroke-width="2" fill="none" />
+  </g>
+</svg>

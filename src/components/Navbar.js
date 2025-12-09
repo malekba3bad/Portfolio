@@ -3,7 +3,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
+// removed unused Button import; using native elements for icon actions
+import saFlag from "../Assets/saudi-arabia.svg";
+import usFlag from "../Assets/us-flag.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
@@ -18,6 +20,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { MdLanguage } from "react-icons/md";
 
 function NavBar() {
   const { t, i18n } = useTranslation();
@@ -122,23 +125,31 @@ function NavBar() {
         <div className="nav-side nav-right">
           <div className="nav-actions">
             <Nav.Item className="fork-btn">
-              <Button
+              <a
                 href="https://github.com/malekba3bad"
                 target="_blank"
+                rel="noreferrer"
                 className="fork-btn-inner"
+                aria-label="Open GitHub"
               >
-                <FaGithub style={{ fontSize: "1.05em" }} /> <AiFillStar style={{ fontSize: "1.0em" }} />
-              </Button>
+                <FaGithub style={{ width: "20px", height: "20px", verticalAlign: "middle" }} />
+              </a>
             </Nav.Item>
 
             <Nav.Item className="lang-item">
-              <Button
+              <button
                 onClick={toggleLanguage}
                 className="language-toggle-btn"
-                variant="dark"
+                aria-label={language === "en" ? "Switch to Arabic" : "Switch to English"}
+                type="button"
               >
-                {language === "en" ? "العربية" : "English"}
-              </Button>
+                <MdLanguage style={{ width: "20px", height: "20px", verticalAlign: "middle", marginRight: "6px" }} />
+                <img
+                  src={language === "en" ? saFlag : usFlag}
+                  alt={language === "en" ? "Saudi Arabia flag" : "United States flag"}
+                  style={{ width: "20px", height: "14px", objectFit: "cover" }}
+                />
+              </button>
             </Nav.Item>
           </div>
         </div>
