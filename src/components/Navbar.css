@@ -1,0 +1,111 @@
+/* Modern navbar styles with RTL support */
+:root{
+  --nav-bg: rgba(10,10,10,0.45);
+  --accent: #57b6ff;
+  --text: #ffffff;
+}
+
+.navbar-custom{
+  width:100%;
+  top:0;
+  z-index:1030;
+  background: linear-gradient(180deg, rgba(0,0,0,0.22), rgba(0,0,0,0.12));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background .25s ease, box-shadow .25s ease;
+  padding: .35rem 0;
+}
+
+.navbar-custom.sticky{
+  background: rgba(0,0,0,0.55);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.nav-container{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  width:100%;
+  padding: 0 .5rem;
+}
+
+.nav-side{ flex:0 0 auto; display:flex; align-items:center; z-index:30; }
+.nav-left{ justify-content:flex-start; }
+.nav-right{ justify-content:flex-end; }
+
+.nav-brand{ display:flex; align-items:center; }
+.logo{ height:42px; width:auto; transition: transform .18s ease; }
+.logo:hover{ transform: translateY(-3px); }
+
+.nav-center-wrapper{ flex:1 1 auto; display:block; position:relative; }
+.nav-toggle{ border:0; }
+
+.nav-collapse{ display:flex; align-items:center; gap:1rem; }
+
+.nav-center{ display:flex; gap:1.5rem; justify-content:center; align-items:center; list-style:none; padding-left:0; }
+
+.nav-link-custom{
+  color:var(--text);
+  font-weight:500;
+  padding:.35rem .5rem;
+  border-radius:6px;
+  transition: transform .18s ease, color .18s ease, background .18s ease;
+  display:flex; align-items:center; gap:.45rem;
+}
+
+.nav-link-custom:hover{ transform: translateY(-3px); color:var(--accent); text-decoration:none; background: rgba(255,255,255,0.02); }
+.nav-link-custom.active, .nav-link-custom[aria-current="page"]{ color:var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+
+.nav-actions{ display:flex; gap:.6rem; align-items:center; }
+
+.rtl .nav-container{ flex-direction: row-reverse; }
+
+
+.fork-btn .fork-btn-inner{
+  display:inline-flex; gap:.4rem; align-items:center;
+  background: linear-gradient(90deg,var(--accent), #8be4ff);
+  color:#062230; border:none; padding:.4rem .65rem; border-radius:10px;
+  transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 6px 18px rgba(8,20,30,0.25);
+}
+.fork-btn .fork-btn-inner:hover{ transform: translateY(-3px); box-shadow: 0 10px 22px rgba(8,20,30,0.32); }
+
+.language-toggle-btn{ padding:.35rem .6rem; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.08); color:var(--text); transition: background .12s ease, transform .12s ease; }
+.language-toggle-btn:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.03); }
+.lang-item{ margin-left:6px; }
+
+.rtl .nav-brand{ }
+.rtl .nav-toggle{ }
+.rtl .nav-collapse{ }
+
+/* Desktop: keep center nav absolutely centered so mirroring does not shift it */
+@media (min-width:768px){
+  .nav-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+  }
+
+  /* hide the collapse toggle on desktop (optional) */
+  .nav-toggle{ display:none; }
+}
+
+@media (max-width:767px){
+  .nav-center{ flex-direction:column; gap:.4rem; padding:.6rem 1rem; }
+  .nav-actions{ margin:.45rem auto 0 auto; }
+  .lang-item{ margin-left:0; margin-top:4px; }
+  .logo{ height:36px; }
+  .nav-center{ position: static; transform: none; left: auto; top: auto; }
+  .nav-toggle{ display:block; }
+}
+
+/* Light-theme tweaks: if your app toggles theme via body class */
+body.light-theme .navbar-custom, body.light-theme .navbar-custom.sticky{ background: rgba(255,255,255,0.55); color:#0b1420; border-bottom:1px solid rgba(10,20,30,0.04); }
+body.light-theme .nav-link-custom{ color:#0b1420; }
+body.light-theme .language-toggle-btn{ color:#0b1420; border-color: rgba(0,0,0,0.06); }
+body.light-theme .fork-btn .fork-btn-inner{ color:#062230; }
