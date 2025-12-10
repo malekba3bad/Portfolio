@@ -107,6 +107,7 @@
 
 .nav-actions {
   display: flex;
+  direction: ltr ! important;
   /* gap: 0.6rem; */
   align-items: center;
 }

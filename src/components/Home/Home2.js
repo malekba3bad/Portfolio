@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.png";
 import Tilt from "react-parallax-tilt";
@@ -7,6 +6,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -31,7 +31,7 @@ function Home2() {
               <br />
               {t("home2.interest")} &nbsp;
               <i>
-                <b className="purple">{t("home2.interest_ui")}</b> and
+                <b className="purple">{t("home2.interest_ui")}</b> {t("home2.and")}{" "}
                 {" "}
                 <b className="purple">
                 {t("home2.interest_build")}
@@ -39,20 +39,20 @@ function Home2() {
               </i>
               <br />
               <br />
-              {t("home2.designs")} <b className="purple">{t("home2.designs_bold")}</b> and
+              {t("home2.designs")} <b className="purple">{t("home2.designs_bold")}</b> {t("home2.and")}{" "}
               <i>
                 <b className="purple">
                   {" "}
                   {t("home2.frameworks")}
                 </b>
               </i>
-              &nbsp; like
+              {/* &nbsp; like
               <i>
                 <b className="purple"> {t("home2.react")}</b>
               </i>
               &nbsp; along with a focus on <i>
                 <b className="purple"> {t("home2.uiux")} </b> &nbsp;
-              </i>  {t("home2.principles")}.
+              </i>  {t("home2.principles")}. */}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -64,7 +64,7 @@ function Home2() {
         <Row>
           <Col md={12} className="home-about-social">
             <h1>{t("home2.findme")}</h1>
-            <p>
+            <p className="connect-with-me">
               {t("home2.connect")} <span className="purple">{t("home2.connect_bold")} </span>{t("home2.with_me")}
             </p>
             <ul className="home-about-social-links">
@@ -106,6 +106,16 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <AiFillInstagram />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://wa.me/+967773250384"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                >
+                  <AiOutlineWhatsApp />
                 </a>
               </li>
             </ul>

@@ -10,9 +10,12 @@
     "greeting": "Hi There!",
     "name": "I'M",
     "fullName": "MALEK BA ABBAD",
+    "experiences": "3 Years Experience in",
     "roles": [
-      "Front-End Developer",
-      "UI/UX Designer"
+      "Front-End Development",
+      "UI/UX Design",
+      "Maintenance & Support",
+      "Social Media Management"
     ]
   },
   "about": {
@@ -22,11 +25,14 @@
     "skillsetBold": "Skillset",
     "toolsHeading": "Tools",
     "toolsBold": "I use",
-    "description": "Hi Everyone, I am Malek Ba Abbad from Hadhramout, Yemen. I am currently employed as a Front-End developer at Arab WareDoss. I completed my bachelor's in Management Information Systems at Yarmouk University, Jordan, where I also served as the Head of the Yemeni community, actively contributing to its activities and initiatives.",
-    "activities": "Apart from coding, some other activities that I love to do!",
-    "gym": "Go to GYM",
-    "blogs": "Writing Tech Blogs",
-    "games": "Playing Games"
+    "description": "Hi, I'm Malik from Yemen. I graduated from Yarmouk University in Jordan and I'm a passionate Front-End Developer with 3 years of experience in building clean, user-friendly web interfaces.",
+    "focus": "I'm specialized in HTML, CSS, and JavaScript, with a solid understanding of modern frameworks like React. My main focus is designing and building clean, responsive code to deliver smooth, high-quality user experiences across all devices.",
+    "arabwdoss": "I currently work as a React Developer at ArabWare Dos, where I use my skills to build digital solutions. My experience includes developing key platforms and applications such as:",
+"bank": "Creating responsive interfaces for major corporate websites, including the Bin Dowal Bank website, which focuses on providing Islamic microfinance services.",
+"wallet": "Developing the Bin Dowal E-Wallet website — Yemen’s leading electronic payment gateway — using HTML, Tailwind CSS, and ReactJS.",
+"baligne": "Designing modern, responsive dashboard systems like the Ballighni app dashboard, which offers a smooth workflow for employees and features real-time data fetching from APIs.",
+"responsive": "I'm dedicated to delivering technical solutions that not only meet functional requirements but also ensure optimal accessibility and responsiveness across all devices."
+
   },
   "projects": {
     "heading": "My Recent",
@@ -86,26 +92,26 @@
       "description": "Provide ongoing maintenance and support to ensure your systems run smoothly."
     }
   },
-  "home2": {
-    "introduction": "LET ME INTRODUCE MYSELF",
-    "intro_bold": "INTRODUCE",
-    "passion": "I fell in love with front-end development and design, and I'm always learning something new, I think… 🎨💻",
-    "fluent": "I am fluent in languages and modern frameworks like",
-    "fluent_bold": "Javascript and React JS.",
-    "interest": "My field of interest lies in crafting beautiful user-friendly interfaces and building seamless web experiences.",
-    "interest_ui": "user-friendly interfaces",
-    "interest_build": "building seamless web experiences.",
-    "designs": "Whenever possible, I love bringing my designs to life using",
-    "designs_bold": "Modern Front-End Libraries",
-    "frameworks": "Frameworks",
-    "react": "React.js,",
-    "uiux": "UI/UX",
-    "principles": "principles to create intuitive and engaging products.",
-    "findme": "FIND ME ON",
-    "connect": "Feel free to",
-    "connect_bold": "connect",
-    "with_me": "with me"
-  },
+ "home2": {
+  "introduction": "HEY, I'M",
+  "intro_bold": "GLAD YOU'RE HERE",
+  "passion": "I'm all about front-end development and design — always experimenting, learning, and building cool things. 🎨💻",
+  "fluent": "I work comfortably with modern tools like",
+  "fluent_bold": "JavaScript and React JS.",
+  "interest": "I enjoy creating clean, user-friendly interfaces and smooth, enjoyable web experiences.",
+  "interest_ui": "clean, user-friendly interfaces",
+  "interest_build": "smooth and enjoyable web experiences.",
+  "designs": "Whenever I can, I bring ideas to life using",
+  "designs_bold": "modern front-end libraries",
+  "and": "and",
+  "frameworks": " frameworks.",
+  "findme": "FIND ME ON",
+  "connect": "Feel free to",
+  "connect_bold": "reach out",
+  "with_me": "anytime!"
+},
+
+  
   "footer": {
     "developed": "Developed by Malek Ba Abbad",
     "copyright": "Copyright ©"

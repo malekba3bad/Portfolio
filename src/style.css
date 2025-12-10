@@ -86,7 +86,7 @@ button:focus {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
 }
 
 .navbar-toggler {
@@ -177,7 +177,7 @@ button:focus {
 
 .navbar-nav .nav-item {
   position: relative;
-  margin-left: 20px;
+  /* margin-left: 5px; */
 }
 
 .navbar-nav .nav-item a {
@@ -340,6 +340,14 @@ button:focus {
   text-align: center !important;
   padding-top: 25px;
   color: white !important;
+}
+
+.connect-with-me{
+  text-align: center !important;
+}
+
+.home-about-social ul {
+  padding-left: 0 !important;
 }
 
 .home-about-social-links {
@@ -588,9 +596,10 @@ button:focus {
 }
 
 .about-activity {
+  
   list-style: none !important;
-  text-align: left !important;
   padding-left: 1px !important;
+  text-align: justify !important;
 }
 
 @media (max-width: 767px) {
@@ -780,9 +789,6 @@ body.rtl-mode .home-content {
   text-align: right;
 }
 
-body.rtl-mode .project-heading {
-  text-align: right;
-}
 
 body.rtl-mode .about-img {
   float: left;
@@ -813,13 +819,13 @@ body.rtl-mode .project-card {
   margin: 10px auto;
 }
 
-body.rtl-mode .service-card {
+/* body.rtl-mode .service-card {
   text-align: right;
-}
+} */
 
-body.rtl-mode p {
+/* body.rtl-mode p {
   text-align: justify;
-}
+} */
 
 @media (max-width: 768px) {
   body.rtl-mode .ms-auto {

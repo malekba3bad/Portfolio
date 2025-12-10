@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { CgGames } from "react-icons/cg";
-import { CgGym } from "react-icons/cg";
-import { TbWriting } from "react-icons/tb";
+import { CgLaptop } from 'react-icons/cg';
+import { CgGym } from 'react-icons/cg';
+import { TbWriting } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 
 function AboutCard() {
@@ -12,24 +12,32 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: 'justify' }}>
-            {t("about.description")}
+            {t('about.description')}
             <br />
             <br />
-            {t("about.activities")}
+            {t('about.focus')}
+            <br />
+            <br />
+            {t('about.arabwdoss')}
           </p>
           <ul>
             <li className="about-activity">
-              <CgGym /> {t("about.gym")}
+              1-
+              <span> {t('about.bank')}</span>
             </li>
+            <br />
             <li className="about-activity">
-              <TbWriting /> {t("about.blogs")}
+              2-
+              <span> {t('about.wallet')} </span>
             </li>
+            <br />
             <li className="about-activity">
-              <CgGames /> {t("about.games")}
+              3-
+              <span> {t('about.baligne')} </span>
             </li>
           </ul>
 
-          
+          <p style={{ textAlign: 'justify' }}>{t('about.responsive')}</p>
         </blockquote>
       </Card.Body>
     </Card>

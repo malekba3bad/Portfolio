@@ -25,8 +25,11 @@ function Home() {
                 {t("home.name")}
                 <strong className="main-name"> {t("home.fullName")}</strong>
               </h1>
+              <h1 className="heading-name">
+                {t("home.experiences")}
+              </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 50 }}>
                 <Type />
               </div>
             </Col>
