@@ -10,19 +10,19 @@ const Services = () => {
       icon: "🖥️",
       title: t("services.webDev.title"),
       description: t("services.webDev.description"),
-      gradient: "linear-gradient(135deg, #8e2de2, #4a00e0)", 
+      
     },
     {
       icon: "🎨",
       title: t("services.uiux.title"),
       description: t("services.uiux.description"),
-      gradient: "linear-gradient(135deg, #00c6ff, #0072ff)", 
+      
     },
     {
       icon: "🔧",
       title: t("services.maintenance.title"),
       description: t("services.maintenance.description"),
-      gradient: "linear-gradient(135deg, #56ab2f, #a8e063)", 
+      
     },
   ];
 

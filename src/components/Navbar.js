@@ -52,6 +52,36 @@ function NavBar() {
     setLanguage(newLang);
   };
 
+  // Grouped mobile footer buttons (reusable)
+  const MobileFooterButtons = ({ language, onToggle }) => (
+    <div className={`mobile-footer-buttons ${language === "ar" ? "rtl" : "ltr"}`}>
+      <a
+        className="mobile-github-btn"
+        href="https://github.com/malekba3bad"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Open GitHub"
+      >
+        <FaGithub />
+        <span className="btn-text">GitHub</span>
+      </a>
+
+      <button
+        className="mobile-lang-btn"
+        onClick={onToggle}
+        aria-label={language === "en" ? "Switch to Arabic" : "Switch to English"}
+        type="button"
+      >
+        <MdLanguage />
+        <img
+          src={language === "en" ? saFlag : usFlag}
+          alt={language === "en" ? "Saudi Arabia flag" : "United States flag"}
+        />
+        <span className="btn-text">{language === "en" ? "ع" : "EN"}</span>
+      </button>
+    </div>
+  );
+
   return (
     <Navbar
       expanded={expand}
@@ -117,13 +147,15 @@ function NavBar() {
               </Nav>
             </div>
 
-            
+            <div className="mobile-only mobile-panel-footer">
+              <MobileFooterButtons language={language} onToggle={() => { toggleLanguage(); updateExpanded(false); }} />
+            </div>
           </Navbar.Collapse>
         </div>
 
-        {/* Right (or left in RTL) - actions container */}
+        {/* Right (or left in RTL) - actions container (desktop-only) */}
         <div className="nav-side nav-right">
-          <div className="nav-actions">
+          <div className="nav-actions desktop-only">
             <Nav.Item className="fork-btn">
               <a
                 href="https://github.com/malekba3bad"
