@@ -37,16 +37,7 @@ function Projects() {
             />
           </Col>
         
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={movies}
-              isBlog={false}
-              title={t("projects.cinema.title")}
-              description={t("projects.cinema.description")}
-              ghLink="https://github.com/malekba3bad/movie-app"
-              
-            />
-          </Col>
+        
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={BinDowalPay}
@@ -117,6 +108,17 @@ function Projects() {
               isBlog={false}
               title={t("projects.arab.title")}
               description={t("projects.arab.description")}
+              
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={movies}
+              isBlog={false}
+              title={t("projects.cinema.title")}
+              description={t("projects.cinema.description")}
+              ghLink="https://github.com/malekba3bad/movie-app"
               
             />
           </Col>

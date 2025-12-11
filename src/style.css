@@ -333,7 +333,7 @@ button:focus {
 .home-about-body {
   padding-top: 50px;
   font-size: 1.2em !important;
-  text-align: left;
+  text-align: justify !important;
 }
 
 .home-about-social {
@@ -731,7 +731,7 @@ button:focus {
 
 .fork-btn {
   font-size: 1.1em !important;
-  padding-top: 10px !important;
+  padding-top: 5px !important;
 }
 
 .fork-btn-inner {
