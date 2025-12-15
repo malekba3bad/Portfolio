@@ -38,6 +38,11 @@
     "heading": "My Recent",
     "headingBold": "Works",
     "description": "Here are a few projects I've worked on recently.",
+
+    "arabwd": {
+      "title": "Arab Ware Dos Software Company",
+      "description": "Arab Ware Dos Software Technologies Company website, showcasing the company's services and advanced tech solutions. The site provides an engaging and user-friendly interface to introduce clients to the latest technologies offered by the company."
+    },
     "balleghny": {
       "title": "Balleghny Dashboard",
       "description": "This dashboard system is a modern, responsive web application It provides an intuitive interface for handle employees tasks. The dashboard features secure authentication and real-time data fetching from APIs"

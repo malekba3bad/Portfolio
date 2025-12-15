@@ -10,6 +10,7 @@ import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
 import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
 import movies from "../../Assets/Projects/movie-app.png";
 import Balleghny from "../../Assets/Projects/Balleghny.png";
+import ArabWD from "../../Assets/Projects/ArabWD.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -25,6 +26,18 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ArabWD}
+              isBlog={false}
+              title={t("projects.arabwd.title")}
+              description={t("projects.arabwd.description")}
+              
+              // demoLink="https://arabwaredos.com/"
+            />
+          </Col>
+
         <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Balleghny}
