@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
@@ -119,6 +118,7 @@ function Projects() {
               title={t("projects.cinema.title")}
               description={t("projects.cinema.description")}
               ghLink="https://github.com/malekba3bad/movie-app"
+              
               
             />
           </Col>
