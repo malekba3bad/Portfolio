@@ -63,6 +63,7 @@
   display: block;
   position: relative;
 }
+
 .nav-toggle {
   border: 0;
 }
@@ -187,13 +188,17 @@
     gap: 0.4rem;
     padding: 0.6rem 1rem;
   }
+  /* Ensure center wrapper respects RTL on mobile irrespective of language */
+  .nav-center-wrapper {
+    direction: rtl !important;
+  }
   /* transform collapse into a modern slide-in panel */
   .nav-collapse {
     transition: transform 0.32s cubic-bezier(.2,.9,.2,1), opacity 0.28s ease;
     position: fixed;
     top: 64px;
     bottom: 18px;
-    right: 12px;
+    right: 30px;
     height: fit-content;
     width: 86%;
     max-width: 360px;
@@ -217,6 +222,8 @@
     right: auto;
     transform: translateX(-100%);
   }
+
+  
 
   /* when bootstrap collapse opens it adds .show */
   .nav-collapse.show {
