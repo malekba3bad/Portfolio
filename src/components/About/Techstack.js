@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
-import { FaWordpress, FaBootstrap, FiFigma } from "react-icons/fa";
+import { FaWordpress, FaBootstrap } from "react-icons/fa";
 
 import {
   DiJavascript1,
@@ -12,13 +12,7 @@ import {
   DiGit,
   // FaWordpress,
 } from "react-icons/di";
-import {
-  // SiRedis,
-  // SiFirebase,
-  SiNextdotjs,
-  // SiSolidity,
-  // SiPostgresql,
-} from "react-icons/si";
+// import { SiRedis, SiFirebase, SiSolidity, SiPostgresql, SiNextdotjs } from "react-icons/si";
 // import { TbBrandGolang } from "react-icons/tb";
 
 function Techstack() {

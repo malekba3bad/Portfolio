@@ -13,7 +13,6 @@ import "./Navbar.css";
 import { FaGithub } from "react-icons/fa";
 // import { ImBlog } from "react-icons/im";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,

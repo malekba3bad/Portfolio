@@ -1,8 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { CgLaptop } from 'react-icons/cg';
-import { CgGym } from 'react-icons/cg';
-import { TbWriting } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 
 function AboutCard() {
