@@ -518,6 +518,32 @@ button:focus {
   border-radius: 10px !important;
 }
 
+.project-tech-badges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin: 12px 0 6px !important;
+}
+
+.project-tech-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 12px !important;
+  border-radius: 999px !important;
+  border: 1px solid #608BC1 !important;
+  background: rgba(19, 62, 135, 0.25) !important;
+  color: #e9f0ff !important;
+  font-size: 12px !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.project-tech-badge:hover {
+  box-shadow: 0 0 0 2px rgba(96, 139, 193, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
 .blog-img {
   padding: 0px !important;
   opacity: 0.8 !important;

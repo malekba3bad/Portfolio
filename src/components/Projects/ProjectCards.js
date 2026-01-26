@@ -19,8 +19,16 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: 'justify' }}>
           {props.description}
         </Card.Text>
-        
-
+        {Array.isArray(props.techStack) && props.techStack.length > 0 && (
+          <div className="project-tech-badges">
+            {props.techStack.map((tech) => (
+              <span className="project-tech-badge" key={tech}>
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+<br/>
         {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
         {!props.isBlog && props.ghLink && (
           <Button

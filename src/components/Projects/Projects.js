@@ -33,6 +33,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.arabwd.title")}
               description={t("projects.arabwd.description")}
+              techStack={["React", "Bootstrap", "i18n", "API"]}
               
               // demoLink="https://arabwaredos.com/"
             />
@@ -44,6 +45,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.balleghny.title")}
               description={t("projects.balleghny.description")}
+              techStack={["React", "Bootstrap", "Charts", "Auth"]}
               
               
             />
@@ -56,6 +58,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.binDowal.title")}
               description={t("projects.binDowal.description")}
+              techStack={["React", "Vite", "Payments", "API"]}
               
               demoLink="https://bin-dowal-pay-gamma.vercel.app/"
             />
@@ -67,6 +70,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.logistics.title")}
               description={t("projects.logistics.description")}
+              techStack={["React", "SEO", "Forms", "Map"]}
               
               demoLink="https://bdlogisticsc.com/"
             />
@@ -78,6 +82,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.radiation.title")}
               description={t("projects.radiation.description")}
+              techStack={["React", "Accessibility", "CMS", "Forms"]}
               
               demoLink="https://mrcmed.org/"
             />
@@ -89,6 +94,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.dalil.title")}
               description={t("projects.dalil.description")}
+              techStack={["React", "Search", "Filters", "Maps"]}
                        
             />
           </Col>
@@ -99,6 +105,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.mikrotik.title")}
               description={t("projects.mikrotik.description")}
+              techStack={["HTML", "CSS", "JS", "Responsive"]}
                           
             />
           </Col>
@@ -109,6 +116,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.bank.title")}
               description={t("projects.bank.description")}
+              techStack={["React", "UI", "Forms", "i18n"]}
               
               demoLink="https://www.bank-bindowal.com/"
             />
@@ -120,6 +128,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.arab.title")}
               description={t("projects.arab.description")}
+              techStack={["React", "Landing", "SEO", "Forms"]}
               
             />
           </Col>
@@ -130,6 +139,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.cinema.title")}
               description={t("projects.cinema.description")}
+              techStack={["React", "API", "Search", "State"]}
               ghLink="https://github.com/malekba3bad/movie-app"
               
               
