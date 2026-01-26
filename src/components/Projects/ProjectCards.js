@@ -6,6 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 function ProjectCards(props) {
   const { t } = useTranslation();
+  const progress =
+    typeof props.progress === 'number'
+      ? Math.min(100, Math.max(0, props.progress))
+      : null;
   return (
     <Card className="project-card-view">
       <Card.Img
@@ -26,6 +30,26 @@ function ProjectCards(props) {
                 {tech}
               </span>
             ))}
+          </div>
+        )}
+        <br/>
+        {progress !== null && (
+          <div
+            className="project-progress"
+            aria-label={`Project progress ${Math.round(progress)}%`}
+          >
+            <div className="project-progress__meta">
+              <span className="project-progress__label">{t("projects.progress")}</span>
+              <span className="project-progress__value">
+                {Math.round(progress)}%
+              </span>
+            </div>
+            <div className="project-progress__rail">
+              <span
+                className="project-progress__fill"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
           </div>
         )}
 <br/>
