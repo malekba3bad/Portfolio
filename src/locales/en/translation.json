@@ -108,6 +108,10 @@
       "title": "Corporate & Business Websites",
       "description": "Craft modern corporate websites that reflect your brand and support growth."
     },
+    "fullstack": {
+      "title": "Full-Stack Web Development",
+      "description": "End-to-end web development services, from frontend design to backend implementation."
+    },
     "system": {
       "title": "System & Dashboard Development",
       "description": "Design and develop custom systems and dashboards tailored to your business needs."
@@ -123,6 +127,10 @@
     "api": {
       "title": "API Integration",
       "description": "Connect frontends to APIs for smooth data flow and reliable interactions."
+    },
+    "hosting": {
+      "title": "Website Hosting & Deployment",
+      "description": "Provide secure hosting and deployment services to ensure your website runs smoothly."
     },
     "performance": {
       "title": "Performance & Responsive Optimization",

@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { SiTailwindcss, SiTypescript, SiNextdotjs, SiMysql } from 'react-icons/si';
 import { FaWordpress, FaBootstrap, FaLaravel } from 'react-icons/fa';
-
+import { TbSeo } from "react-icons/tb";
 import { DiJavascript1, DiReact, DiGit } from 'react-icons/di';
 
 function Techstack() {
@@ -38,6 +38,10 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <FaWordpress />
       </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <TbSeo />
+        </Col>
+
     </Row>
   );
 }

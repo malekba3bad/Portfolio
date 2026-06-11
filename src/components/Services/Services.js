@@ -15,6 +15,10 @@ const Services = () => {
       description: t("services.corporate.description"),
     },
     {
+      title: t("services.fullstack.title"),
+      description: t("services.fullstack.description"),
+    },
+    {
       title: t("services.system.title"),
       description: t("services.system.description"),
     },
@@ -29,6 +33,10 @@ const Services = () => {
     {
       title: t("services.api.title"),
       description: t("services.api.description"),
+    },
+    {
+      title: t("services.hosting.title"),
+      description: t("services.hosting.description"),
     },
     {
       title: t("services.performance.title"),
