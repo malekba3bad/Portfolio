@@ -14,6 +14,7 @@ import ArabWD from "../../Assets/Projects/ArabWD.png";
 import SahelTeam from "../../Assets/Projects/sahel.png";
 import meoh from "../../Assets/Projects/meoh.png";
 import newBank from "../../Assets/Projects/newBank.png";
+import gold from "../../Assets/Projects/gold.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -29,6 +30,18 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={gold}
+              isBlog={false}
+              title={t("projects.gold.title")}
+              description={t("projects.gold.description")}
+              techStack={["NextJS", "Tailwind", "Typescript", "API", "Charts", "Auth", "CMS"]}
+              progress={20}
+              
+              demoLink="https://www.bank-bindowal.com/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={newBank}
@@ -47,7 +60,7 @@ function Projects() {
               isBlog={false}
               title={t("projects.meoh.title")}
               description={t("projects.meoh.description")}
-              techStack={["Laravel" , "JS", "Bootstrap"]}
+              techStack={["Laravel" , "JS", "Bootstrap","Auth", "CMS"]}
               progress={100}
               demoLink="https://meohgov.netlify.app/"
             />

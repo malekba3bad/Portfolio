@@ -90,6 +90,10 @@
     "newBank": {
       "title": "Bin Dowal Islamic Microfinance Bank",
       "description": "Designed and developed a new user interface for Bin Dowal Bank using NextJS, Tailwind CSS, and Typescript. The new interface aims to enhance user experience and provide a modern, responsive design that better meets customer needs."
+    },
+    "gold": {
+      "title": "Gold Wallet Platform",
+      "description": "A financial platform for managing gold, wallets, customers, transactions, approvals, and reports. Developed using NextJS, Tailwind CSS, and Typescript, with integrated APIs to create a seamless and interactive user experience. Features include interactive charts, authentication system, and a content management system (CMS) for easy platform management."
     }
   },
   "services": {
