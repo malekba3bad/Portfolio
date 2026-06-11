@@ -39,7 +39,7 @@ function Projects() {
               techStack={["NextJS", "Tailwind", "Typescript", "API", "Charts", "Auth", "CMS"]}
               progress={20}
               
-              demoLink="https://www.bank-bindowal.com/"
+             
             />
           </Col>
           <Col md={4} className="project-card">
