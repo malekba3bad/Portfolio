@@ -34,7 +34,7 @@ function Projects() {
               title={t("projects.arabwd.title")}
               description={t("projects.arabwd.description")}
               techStack={["JS", "GSAP", "Bootstrap"]}
-              progress={80}
+              progress={100}
               
               // demoLink="https://arabwaredos.com/"
             />
