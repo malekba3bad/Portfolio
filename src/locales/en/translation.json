@@ -99,18 +99,34 @@
   "services": {
     "heading": "What",
     "headingBold": "I offer",
-    "description": "Here are the services I offer",
-    "webDev": {
-      "title": "Web Development and Managment",
-      "description": "Build responsive and user-friendly websites tailored to your business needs."
+    "description": "A clean, modern service collection for quality web experiences.",
+    "portfolio": {
+      "title": "Professional Portfolio Websites",
+      "description": "Build polished portfolio sites focused on personal branding and clarity."
     },
-    "uiux": {
-      "title": "UI/UX Design",
-      "description": "Design intuitive and visually appealing interfaces to enhance user engagement."
+    "corporate": {
+      "title": "Corporate & Business Websites",
+      "description": "Craft modern corporate websites that reflect your brand and support growth."
+    },
+    "marketing": {
+      "title": "Marketing Landing Pages",
+      "description": "Design conversion-focused landing pages that capture attention and drive action."
+    },
+    "react": {
+      "title": "React / Next.js Frontend Development",
+      "description": "Deliver fast, scalable interfaces with reusable React and Next.js components."
+    },
+    "api": {
+      "title": "API Integration",
+      "description": "Connect frontends to APIs for smooth data flow and reliable interactions."
+    },
+    "performance": {
+      "title": "Performance & Responsive Optimization",
+      "description": "Improve load speed and responsiveness across every screen size."
     },
     "maintenance": {
-      "title": "Maintenance & Support",
-      "description": "Provide ongoing maintenance and support to ensure your systems run smoothly."
+      "title": "Website Maintenance & Updates",
+      "description": "Keep your website secure and current with regular maintenance and updates."
     }
   },
  "home2": {

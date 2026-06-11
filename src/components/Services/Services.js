@@ -7,45 +7,50 @@ const Services = () => {
   const { t } = useTranslation();
   const services = [
     {
-      icon: "🖥️",
-      title: t("services.webDev.title"),
-      description: t("services.webDev.description"),
-      
+      title: t("services.portfolio.title"),
+      description: t("services.portfolio.description"),
     },
     {
-      icon: "🎨",
-      title: t("services.uiux.title"),
-      description: t("services.uiux.description"),
-      
+      title: t("services.corporate.title"),
+      description: t("services.corporate.description"),
     },
     {
-      icon: "🔧",
+      title: t("services.marketing.title"),
+      description: t("services.marketing.description"),
+    },
+    {
+      title: t("services.react.title"),
+      description: t("services.react.description"),
+    },
+    {
+      title: t("services.api.title"),
+      description: t("services.api.description"),
+    },
+    {
+      title: t("services.performance.title"),
+      description: t("services.performance.description"),
+    },
+    {
       title: t("services.maintenance.title"),
       description: t("services.maintenance.description"),
-      
     },
   ];
 
   return (
     <div className="services-section">
-      <h1 className="project-heading">
-      {t("services.heading")}  <strong className="purple">{t("services.headingBold")} </strong>
+      <div className="services-intro">
+        <h1 className="project-heading">
+          {t("services.heading")} <strong className="purple">{t("services.headingBold")}</strong>
         </h1>
-        <p style={{ color: "white" }}>
-          {t("services.description")}
-        </p>
-      <div className="services-container">
-        
+        <p className="services-description">{t("services.description")}</p>
+      </div>
+
+      <div className="services-grid">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="service-card"
-            style={{ background: service.gradient }}
-          >
-            <div className="icon">{service.icon}</div>
+          <article key={index} className="service-card">
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-          </div>
+          </article>
         ))}
       </div>
     </div>
