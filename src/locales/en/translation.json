@@ -108,6 +108,10 @@
       "title": "Corporate & Business Websites",
       "description": "Craft modern corporate websites that reflect your brand and support growth."
     },
+    "system": {
+      "title": "System & Dashboard Development",
+      "description": "Design and develop custom systems and dashboards tailored to your business needs."
+    },
     "marketing": {
       "title": "Marketing Landing Pages",
       "description": "Design conversion-focused landing pages that capture attention and drive action."
@@ -127,6 +131,14 @@
     "maintenance": {
       "title": "Website Maintenance & Updates",
       "description": "Keep your website secure and current with regular maintenance and updates."
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "description": "Enhance your website's visibility and ranking on search engines with effective SEO strategies."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Craft visually appealing and user-friendly interfaces that enhance user experience."
     }
   },
  "home2": {
