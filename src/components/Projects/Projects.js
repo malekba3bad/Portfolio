@@ -36,7 +36,7 @@ function Projects() {
               techStack={["JS", "GSAP", "Bootstrap"]}
               progress={100}
               
-              // demoLink="https://arabwaredos.com/"
+              demoLink="https://arabwaredos.com/"
             />
           </Col>
 
