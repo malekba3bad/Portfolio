@@ -37,7 +37,7 @@ function About() {
           </Col>
         </Row>
         <h1 className="project-heading">
-          {t("about.skillsetHeading")} <strong className="purple">{t("about.skillsetBold")} </strong>
+           {t("about.skillsetBold")}  <strong className="purple"> {t("about.skillsetHeading")}</strong>
         </h1>
 
         <Techstack />
