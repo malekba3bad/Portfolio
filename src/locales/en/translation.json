@@ -78,6 +78,10 @@
     "arab": {
       "title": "Arab Exchange Company",
       "description": "Offers banking services compliant with Central Bank regulations."
+    },
+    "sahel": {
+      "title": "Sahel Sports Club",
+      "description": "A responsive website that provides information about the Sahel Sports Club, including team details, match results, news, and images."
     }
   },
   "services": {

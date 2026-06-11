@@ -11,6 +11,7 @@ import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
 import movies from "../../Assets/Projects/movie-app.png";
 import Balleghny from "../../Assets/Projects/Balleghny.png";
 import ArabWD from "../../Assets/Projects/ArabWD.png";
+import SahelTeam from "../../Assets/Projects/sahel.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -26,6 +27,19 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={SahelTeam}
+              isBlog={false}
+              title={t("projects.sahel.title")}
+              description={t("projects.sahel.description")}
+              techStack={["NextJS", "Tailwind", "Typescript"]}
+              progress={100}
+              demoLink="https://sahil-team.vercel.app/"
+              
+            />
+          </Col>
 
         <Col md={4} className="project-card">
             <ProjectCard
