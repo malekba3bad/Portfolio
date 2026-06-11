@@ -10,7 +10,7 @@
     "greeting": "Hi There!",
     "name": "I'M",
     "fullName": "MALEK BA ABBAD",
-    "experiences": "3 Years Experience in",
+    "experiences": "5 Years Experience in",
     "roles": [
       "Front-End Development",
       "UI/UX Design",
@@ -82,6 +82,10 @@
     "sahel": {
       "title": "Sahel Sports Club",
       "description": "A responsive website that provides information about the Sahel Sports Club, including team details, match results, news, and images."
+    },
+    "meoh": {
+      "title": "Interactive Digital Kiosk SPA",
+      "description": "Designed and developed an interactive digital kiosk application with its own dashboard to serve as a live display platform for showcasing visual news in offices and institutions (like the Ministry of Education). The application features images, videos, a news ticker, sections for upcoming events, and statistics. It is compatible with smart display screens."
     }
   },
   "services": {
@@ -106,7 +110,7 @@
   "intro_bold": "GLAD YOU'RE HERE",
   "passion": "I'm all about front-end development and design — always experimenting, learning, and building cool things. 🎨💻",
   "fluent": "I work comfortably with modern tools like",
-  "fluent_bold": "JavaScript React JS and Next JS.",
+  "fluent_bold": "React JS and Next JS.",
   "interest": "I enjoy creating clean, user-friendly interfaces and smooth, enjoyable web experiences.",
   "interest_ui": "clean, user-friendly interfaces",
   "interest_build": "smooth and enjoyable web experiences.",

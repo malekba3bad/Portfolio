@@ -12,6 +12,7 @@ import movies from "../../Assets/Projects/movie-app.png";
 import Balleghny from "../../Assets/Projects/Balleghny.png";
 import ArabWD from "../../Assets/Projects/ArabWD.png";
 import SahelTeam from "../../Assets/Projects/sahel.png";
+import meoh from "../../Assets/Projects/meoh.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -27,6 +28,18 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={meoh}
+              isBlog={false}
+              title={t("projects.meoh.title")}
+              description={t("projects.meoh.description")}
+              techStack={["Laravel" , "JS", "Bootstrap"]}
+              progress={100}
+              demoLink="https://meohgov.netlify.app/"
+            />
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
