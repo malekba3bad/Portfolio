@@ -13,6 +13,7 @@ import Balleghny from "../../Assets/Projects/Balleghny.png";
 import ArabWD from "../../Assets/Projects/ArabWD.png";
 import SahelTeam from "../../Assets/Projects/sahel.png";
 import meoh from "../../Assets/Projects/meoh.png";
+import newBank from "../../Assets/Projects/newBank.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -28,6 +29,17 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={newBank}
+              isBlog={false}
+              title={t("projects.newBank.title")}
+              description={t("projects.newBank.description")}
+              techStack={["NextJS", "Tailwind", "Typescript"]}
+              progress={80}
+              demoLink="https://bdbankui.arabwaredos.com"
+            />
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard

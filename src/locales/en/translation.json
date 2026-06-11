@@ -86,6 +86,10 @@
     "meoh": {
       "title": "Interactive Digital Kiosk SPA",
       "description": "Designed and developed an interactive digital kiosk application with its own dashboard to serve as a live display platform for showcasing visual news in offices and institutions (like the Ministry of Education). The application features images, videos, a news ticker, sections for upcoming events, and statistics. It is compatible with smart display screens."
+    },
+    "newBank": {
+      "title": "Bin Dowal Islamic Microfinance Bank",
+      "description": "Designed and developed a new user interface for Bin Dowal Bank using NextJS, Tailwind CSS, and Typescript. The new interface aims to enhance user experience and provide a modern, responsive design that better meets customer needs."
     }
   },
   "services": {
