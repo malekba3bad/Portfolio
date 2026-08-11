@@ -49,7 +49,7 @@ function Projects() {
               title={t("projects.newBank.title")}
               description={t("projects.newBank.description")}
               techStack={["NextJS", "Tailwind", "Typescript"]}
-              progress={80}
+              progress={100}
               demoLink="https://bdbankui.arabwaredos.com"
             />
           </Col>
