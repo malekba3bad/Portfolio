@@ -101,6 +101,10 @@
     "gold": {
       "title": "Gold Wallet Platform",
       "description": "A financial platform for managing gold, wallets, customers, transactions, approvals, and reports. Developed using NextJS, Tailwind CSS, and Typescript, with integrated APIs to create a seamless and interactive user experience. Features include interactive charts, authentication system, and a content management system (CMS) for easy platform management."
+    },
+    "port": {
+      "title": "Hadhramaut Shipping Company",
+      "description": "A simple interface for a company that provides cleaning services in Yemen"
     }
   },
   "services": {
