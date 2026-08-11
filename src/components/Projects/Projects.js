@@ -217,7 +217,6 @@ function Projects() {
               description={t("projects.port.description")}
               techStack={["HTML", "CSS", "JS", "Responsive"]}
               progress={100}
-              demoLink="https://sahil-team.vercel.app/"
             />
           </Col>
 
