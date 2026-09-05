@@ -16,7 +16,7 @@ import meoh from "../../Assets/Projects/meoh.png";
 import newBank from "../../Assets/Projects/newBank.png";
 import gold from "../../Assets/Projects/gold.png";
 import port from "../../Assets/Projects/port.png";
-import prince from "../../Assets/Projects/PRINCE_LINE.png/";
+import prince from "../../Assets/Projects/PRINCE_LINE.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
