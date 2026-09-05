@@ -16,6 +16,7 @@ import meoh from "../../Assets/Projects/meoh.png";
 import newBank from "../../Assets/Projects/newBank.png";
 import gold from "../../Assets/Projects/gold.png";
 import port from "../../Assets/Projects/port.png";
+import prince from "../../Assets/Projects/PRINCE_LINE.png/";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -51,7 +52,19 @@ function Projects() {
               description={t("projects.newBank.description")}
               techStack={["NextJS", "Tailwind", "Typescript"]}
               progress={100}
-              demoLink="https://bdbankui.arabwaredos.com"
+              demoLink="https://www.bank-bindowal.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={prince}
+              isBlog={false}
+              title={t("projects.prince.title")}
+              description={t("projects.prince.description")}
+              techStack={["HTML", "CSS", "JS", "Responsive", "Bootstrap"]}
+              progress={100}
+              demoLink="https://princelineco.com/"
             />
           </Col>
 
