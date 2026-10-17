@@ -18,6 +18,7 @@ import gold from "../../Assets/Projects/gold.png";
 import port from "../../Assets/Projects/port.png";
 import prince from "../../Assets/Projects/PRINCE_LINE.png";
 import bindowalsolar from "../../Assets/Projects/bindowalsolar.png";
+import HRMS from "../../Assets/Projects/HRMS.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -33,6 +34,16 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={HRMS}
+            isBlog={false}
+            title={t("projects.HRMS.title")}
+            description={t("projects.HRMS.description")}
+            techStack={["React", "Tailwind", "Typescript"]}
+            progress={100}
+          />
+          </Col>
           <Col md={4} className="project-card">
           <ProjectCard
             imgPath={bindowalsolar}
