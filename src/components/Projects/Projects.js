@@ -17,6 +17,7 @@ import newBank from "../../Assets/Projects/newBank.png";
 import gold from "../../Assets/Projects/gold.png";
 import port from "../../Assets/Projects/port.png";
 import prince from "../../Assets/Projects/PRINCE_LINE.png";
+import bindowalsolar from "../../Assets/Projects/bindowalsolar.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -32,6 +33,17 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={bindowalsolar}
+            isBlog={false}
+            title={t("projects.bindowalsolar.title")}
+            description={t("projects.bindowalsolar.description")}
+            techStack={["NextJS", "Tailwind", "Typescript"]}
+            progress={100}
+            demoLink="https://www.bindowalsolar.com/"
+          />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={gold}

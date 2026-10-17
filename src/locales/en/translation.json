@@ -109,6 +109,10 @@
     "port": {
       "title": "Hadhramaut Shipping Company",
       "description": "A simple interface for a company that provides cleaning services in Yemen"
+    },
+    "bindowalsolar": {
+      "title": "Bin Dowal Renewable Energy Company",
+      "description": "Designed and developed a new user interface for Bin Dowal Renewable Energy Company using NextJS, Tailwind CSS, and Typescript. The new interface aims to enhance user experience and provide a modern, responsive design that better meets customer needs."
     }
   },
   "services": {
