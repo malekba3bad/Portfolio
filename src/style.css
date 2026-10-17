@@ -523,6 +523,7 @@ button:focus {
   flex-wrap: wrap !important;
   gap: 8px !important;
   margin: 12px 0 6px !important;
+  justify-content: center;
 }
 
 .project-tech-badge {

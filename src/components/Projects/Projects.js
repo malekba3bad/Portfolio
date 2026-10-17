@@ -19,6 +19,7 @@ import port from "../../Assets/Projects/port.png";
 import prince from "../../Assets/Projects/PRINCE_LINE.png";
 import bindowalsolar from "../../Assets/Projects/bindowalsolar.png";
 import HRMS from "../../Assets/Projects/HRMS.png";
+import Inventory from "../../Assets/Projects/Inventory.png";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -34,6 +35,18 @@ function Projects() {
           {t("projects.description")}
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          
+          <Col md={4} className="project-card">
+          <ProjectCard
+            imgPath={Inventory}
+            isBlog={false}
+            title={t("projects.Inventory.title")}
+            description={t("projects.Inventory.description")}
+            techStack={["Bootstrap", "JavaScript"]}
+            progress={100}
+          />
+          </Col>
+
           <Col md={4} className="project-card">
           <ProjectCard
             imgPath={HRMS}
@@ -79,17 +92,6 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={prince}
-              isBlog={false}
-              title={t("projects.prince.title")}
-              description={t("projects.prince.description")}
-              techStack={["HTML", "CSS", "JS", "Responsive", "Bootstrap"]}
-              progress={100}
-              demoLink="https://princelineco.com/"
-            />
-          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -141,7 +143,17 @@ function Projects() {
               
             />
           </Col>
-        
+         <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={prince}
+              isBlog={false}
+              title={t("projects.prince.title")}
+              description={t("projects.prince.description")}
+              techStack={["HTML", "CSS", "JS", "Responsive", "Bootstrap"]}
+              progress={100}
+              demoLink="https://princelineco.com/"
+            />
+          </Col>
         
         <Col md={4} className="project-card">
             <ProjectCard

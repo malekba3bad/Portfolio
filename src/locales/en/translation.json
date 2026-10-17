@@ -117,6 +117,10 @@
     "HRMS": {
       "title": "Human Resource Management System",
       "description": "A comprehensive system for managing human resources, developed using React, Tailwind CSS, and Typescript. The system provides a user-friendly interface for managing employee affairs, tracking attendance and leave, managing payroll, and generating reports. The system is designed to meet the needs of small and medium-sized businesses, providing a seamless and efficient user experience."
+    },
+    "Inventory": {
+      "title": "Inventory Management System",
+      "description": "A comprehensive system for managing inventory, developed using React, Tailwind CSS, and Typescript. The system provides a user-friendly interface for managing inventory, tracking attendance and leave, managing payroll, and generating reports. The system is designed to meet the needs of small and medium-sized businesses, providing a seamless and efficient user experience."
     }
   },
   "services": {
