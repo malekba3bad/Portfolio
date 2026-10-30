@@ -1,276 +1,157 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useMemo, useEffect, useRef } from "react";
+import { Container } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import bank from "../../Assets/Projects/bank.png";
-import Dalil from "../../Assets/Projects/Dalil.png";
-import logistics from "../../Assets/Projects/logistics.png";
-import AlArab from "../../Assets/Projects/AlArab.png";
-import Radiation from "../../Assets/Projects/Radiation.png";
-import BinDowalPay from "../../Assets/Projects/BinDowalPay.png";
-import MikroTik from "../../Assets/Projects/MikroTik-login-page.png";
-import movies from "../../Assets/Projects/movie-app.png";
-import Balleghny from "../../Assets/Projects/Balleghny.png";
-import ArabWD from "../../Assets/Projects/ArabWD.png";
-import SahelTeam from "../../Assets/Projects/sahel.png";
-import meoh from "../../Assets/Projects/meoh.png";
-import newBank from "../../Assets/Projects/newBank.png";
-import gold from "../../Assets/Projects/gold.png";
-import port from "../../Assets/Projects/port.png";
-import prince from "../../Assets/Projects/PRINCE_LINE.png";
-import bindowalsolar from "../../Assets/Projects/bindowalsolar.png";
-import HRMS from "../../Assets/Projects/HRMS.png";
-import Inventory from "../../Assets/Projects/Inventory.png";
+import ProjectModal from "./ProjectModal";
+import { PROJECTS_DATA, PROJECT_CATEGORIES } from "../../data/projectsData";
 import { useTranslation } from "react-i18next";
+import { HiOutlineSearch, HiOutlineX } from "react-icons/hi";
+import gsap from "gsap";
 
 function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProject, setSelectedProject] = useState(null);
+  const gridRef = useRef(null);
+
+  const categoryCounts = useMemo(() => {
+    const counts = { all: PROJECTS_DATA.length };
+    PROJECTS_DATA.forEach((p) => {
+      counts[p.category] = (counts[p.category] || 0) + 1;
+    });
+    return counts;
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    return PROJECTS_DATA.filter((project) => {
+      const matchesCat =
+        activeCategory === "all" || project.category === activeCategory;
+      if (!matchesCat) return false;
+
+      if (!searchQuery.trim()) return true;
+      const q = searchQuery.toLowerCase();
+      const title = t(`projects.${project.i18nKey}.title`).toLowerCase();
+      const desc = t(`projects.${project.i18nKey}.description`).toLowerCase();
+      const techMatch = project.techStack.some((tech) =>
+        tech.toLowerCase().includes(q)
+      );
+      return title.includes(q) || desc.includes(q) || techMatch;
+    });
+  }, [activeCategory, searchQuery, t]);
+
+  useEffect(() => {
+    if (!gridRef.current) return;
+    const cards = gridRef.current.querySelectorAll(".project-grid-item");
+    if (!cards.length) return;
+
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.45,
+        stagger: 0.04,
+        ease: "power2.out",
+        overwrite: "auto",
+      }
+    );
+  }, [activeCategory, searchQuery, i18n.language]);
+
   return (
-    <Container fluid className="project-section">
-      <Particle />
+    <section className="project-section" dir={isRTL ? "rtl" : "ltr"}>
       <Container>
-        <h1 className="project-heading">
-          {t("projects.heading")} <strong className="purple">{t("projects.headingBold")} </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          {t("projects.description")}
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          
-          <Col md={4} className="project-card">
-          <ProjectCard
-            imgPath={Inventory}
-            isBlog={false}
-            title={t("projects.Inventory.title")}
-            description={t("projects.Inventory.description")}
-            techStack={["Bootstrap", "JavaScript"]}
-            progress={100}
-          />
-          </Col>
+        {/* Asymmetric Editorial Header */}
+        <div className="editorial-section-header">
+          <div className="editorial-header-left">
+            <span className="editorial-index">
+              01 — {t("projects.eyebrow")}
+            </span>
+            <h1 className="editorial-section-title">
+              {t("projects.heading")} {t("projects.headingBold")}
+            </h1>
+          </div>
+          <div className="editorial-header-right">
+            <p className="editorial-section-desc">
+              {t("projects.description")}
+            </p>
+          </div>
+        </div>
 
-          <Col md={4} className="project-card">
-          <ProjectCard
-            imgPath={HRMS}
-            isBlog={false}
-            title={t("projects.HRMS.title")}
-            description={t("projects.HRMS.description")}
-            techStack={["React", "Tailwind", "Typescript"]}
-            progress={100}
-          />
-          </Col>
-          <Col md={4} className="project-card">
-          <ProjectCard
-            imgPath={bindowalsolar}
-            isBlog={false}
-            title={t("projects.bindowalsolar.title")}
-            description={t("projects.bindowalsolar.description")}
-            techStack={["NextJS", "Tailwind", "Typescript"]}
-            progress={100}
-            demoLink="https://www.bindowalsolar.com/"
-          />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={gold}
-              isBlog={false}
-              title={t("projects.gold.title")}
-              description={t("projects.gold.description")}
-              techStack={["NextJS", "Tailwind", "Typescript", "API", "Charts", "Auth", "CMS"]}
-              progress={20}
-              
-             
-            />
-          </Col>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={newBank}
-              isBlog={false}
-              title={t("projects.newBank.title")}
-              description={t("projects.newBank.description")}
-              techStack={["NextJS", "Tailwind", "Typescript"]}
-              progress={100}
-              demoLink="https://www.bank-bindowal.com/"
-            />
-          </Col>
+        {/* Borderless Horizontal Editorial Filter Bar */}
+        <div className="editorial-filter-bar">
+          <div className="editorial-tabs" role="tablist">
+            {PROJECT_CATEGORIES.map((cat) => {
+              const isActive = activeCategory === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={isActive}
+                  className={`editorial-tab ${isActive ? "is-active" : ""}`}
+                  onClick={() => setActiveCategory(cat.id)}
+                >
+                  <span>{t(cat.labelKey)}</span>
+                  <sup className="tab-count">{categoryCounts[cat.id] || 0}</sup>
+                </button>
+              );
+            })}
+          </div>
 
+          <div className="editorial-search-field">
+            <HiOutlineSearch className="editorial-search-icon" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={t("projects.searchPlaceholder")}
+              className="editorial-search-input"
+              aria-label={t("projects.searchPlaceholder")}
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                className="search-clear-btn"
+                onClick={() => setSearchQuery("")}
+                aria-label="Clear search"
+              >
+                <HiOutlineX />
+              </button>
+            )}
+          </div>
+        </div>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={meoh}
-              isBlog={false}
-              title={t("projects.meoh.title")}
-              description={t("projects.meoh.description")}
-              techStack={["Laravel" , "JS", "Bootstrap","Auth", "CMS"]}
-              progress={100}
-              demoLink="https://meohgov.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={SahelTeam}
-              isBlog={false}
-              title={t("projects.sahel.title")}
-              description={t("projects.sahel.description")}
-              techStack={["NextJS", "Tailwind", "Typescript"]}
-              progress={100}
-              demoLink="https://sahil-team.vercel.app/"
-              
-            />
-          </Col>
-
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={ArabWD}
-              isBlog={false}
-              title={t("projects.arabwd.title")}
-              description={t("projects.arabwd.description")}
-              techStack={["JS", "GSAP", "Bootstrap"]}
-              progress={100}
-              
-              demoLink="https://arabwaredos.com/"
-            />
-          </Col>
-
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Balleghny}
-              isBlog={false}
-              title={t("projects.balleghny.title")}
-              description={t("projects.balleghny.description")}
-              techStack={["React", "Tailwind", "Charts", "Auth", "API"]}
-              progress={100}
-              
-              
-            />
-          </Col>
-         <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={prince}
-              isBlog={false}
-              title={t("projects.prince.title")}
-              description={t("projects.prince.description")}
-              techStack={["HTML", "CSS", "JS", "Responsive", "Bootstrap"]}
-              progress={100}
-              demoLink="https://princelineco.com/"
-            />
-          </Col>
-        
-        <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={BinDowalPay}
-              isBlog={false}
-              title={t("projects.binDowal.title")}
-              description={t("projects.binDowal.description")}
-              techStack={["React", "Tailwind", "API"]}
-              progress={100}
-              
-              demoLink="https://bin-dowal-pay-gamma.vercel.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={logistics}
-              isBlog={false}
-              title={t("projects.logistics.title")}
-              description={t("projects.logistics.description")}
-              techStack={["React", "SEO", "Forms"]}
-              progress={100}
-              
-              demoLink="https://bdlogisticsc.com/"
-            />
-          </Col>
-
-           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Radiation}
-              isBlog={false}
-              title={t("projects.radiation.title")}
-              description={t("projects.radiation.description")}
-              techStack={["React", "Accessibility", "CMS", "Forms"]}
-              progress={100}
-              
-              demoLink="https://mrcmed.org/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Dalil}
-              isBlog={false}
-              title={t("projects.dalil.title")}
-              description={t("projects.dalil.description")}
-              techStack={["React", "Search", "Filters", "Maps"]}
-              progress={100}
-                       
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={MikroTik}
-              isBlog={false}
-              title={t("projects.mikrotik.title")}
-              description={t("projects.mikrotik.description")}
-              techStack={["HTML", "CSS", "JS", "Responsive"]}
-              progress={100}
-                          
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bank}
-              isBlog={false}
-              title={t("projects.bank.title")}
-              description={t("projects.bank.description")}
-              techStack={["React", "UI", "Forms", "i18n"]}
-              progress={100}
-              
-              demoLink="https://www.bank-bindowal.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={AlArab}
-              isBlog={false}
-              title={t("projects.arab.title")}
-              description={t("projects.arab.description")}
-              techStack={["React", "Landing", "SEO", "Forms"]}
-              progress={100}
-              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={movies}
-              isBlog={false}
-              title={t("projects.cinema.title")}
-              description={t("projects.cinema.description")}
-              techStack={["React", "API", "Search", "State"]}
-              progress={100}
-              ghLink="https://github.com/malekba3bad/movie-app"
-              
-              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={port}
-              isBlog={false}
-              title={t("projects.port.title")}
-              description={t("projects.port.description")}
-              techStack={["HTML", "CSS", "JS", "Responsive"]}
-              progress={100}
-            />
-          </Col>
-
-        </Row>
+        {/* Borderless 2-Column Editorial Gallery */}
+        <div ref={gridRef} className="editorial-projects-grid">
+          {filteredProjects.map((project, idx) => (
+            <div key={project.id} className="project-grid-item">
+              <ProjectCard
+                indexNum={idx + 1 < 10 ? `0${idx + 1}` : `${idx + 1}`}
+                imgPath={project.imgPath}
+                isBlog={false}
+                title={t(`projects.${project.i18nKey}.title`)}
+                description={t(`projects.${project.i18nKey}.description`)}
+                techStack={project.techStack}
+                status={project.status}
+                category={project.category}
+                demoLink={project.demoLink}
+                ghLink={project.ghLink}
+                onSelect={() => setSelectedProject(project)}
+              />
+            </div>
+          ))}
+        </div>
       </Container>
-    </Container>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </section>
   );
 }
 

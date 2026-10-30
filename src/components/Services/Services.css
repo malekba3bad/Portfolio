@@ -1,97 +1,150 @@
-/* Services.css */
-
-/* General styles for the services section */
+/* ==========================================================================
+   EDITORIAL SERVICES & WORKFLOW ARCHITECTURE (Services.css)
+   Zero boxes, zero glowing icon squares — pure hairline rows & typography
+   ========================================================================== */
 
 .services-section {
   position: relative;
-  padding: 150px 20px;
-  text-align: center;
-  background-image: var(--section-background-color);
-  color: white;
+  padding: 130px 0 90px;
+  min-height: 100vh;
+  color: var(--text-primary);
 }
 
-.services-intro {
-  max-width: 780px;
-  margin: 0 auto 40px;
+/* Interactive Full-Width Hairline Service Rows */
+.editorial-services-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.services-description {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  line-height: 1.8;
-  margin: 12px auto 0;
-  max-width: 760px;
-}
-
-.services-grid {
+.editorial-service-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 60px 1.15fr 1.6fr 40px;
+  align-items: baseline;
   gap: 24px;
-  max-width: 1180px;
-  margin: 40px auto 0;
+  padding: 28px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none !important;
+  text-align: start;
+  transition: background-color 0.25s ease, padding 0.25s ease;
 }
 
-.service-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 220px;
-  padding: 30px 26px;
-  border-radius: 22px;
-  background: rgba(13, 13, 22, 0.92);
-  border: 1px solid rgba(96, 139, 193, 0.18);
-  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.18);
-  transition: transform 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease, background-color 0.32s ease;
-  text-align: left;
+.editorial-service-row:hover {
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
-.service-card::before {
-  content: "";
-  display: block;
-  width: 54px;
-  height: 4px;
-  margin-bottom: 18px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #608BC1 0%, #7AA7FF 100%);
+.service-row-num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #64748B;
+  direction: ltr;
+  transition: color 0.25s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
-  background: rgba(18, 19, 39, 0.96);
-  border-color: rgba(96, 139, 193, 0.32);
-  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.24);
+.editorial-service-row:hover .service-row-num {
+  color: #F8FAFC;
 }
 
-.service-card h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+.service-row-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.service-card p {
-  color: rgba(237, 245, 255, 0.88);
+.editorial-service-row:hover .service-row-title {
+  transform: translateX(6px);
+}
+
+[dir="rtl"] .editorial-service-row:hover .service-row-title {
+  transform: translateX(-6px);
+}
+
+.service-row-desc {
+  font-size: 0.96rem;
   line-height: 1.75;
-  font-size: 0.98rem;
+  color: #94A3B8;
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .services-section {
-    padding: 120px 18px;
+.service-row-arrow {
+  justify-self: end;
+  color: #64748B;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.editorial-service-row:hover .service-row-arrow {
+  color: #F8FAFC;
+  transform: translate(3px, -3px);
+}
+
+/* 4-Column Open Architectural Process Strip */
+.services-process-wrapper {
+  margin-top: 80px;
+}
+
+.editorial-process-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editorial-process-col {
+  padding: 36px 24px;
+  border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: start;
+}
+
+.editorial-process-col:last-child {
+  border-inline-end: none;
+}
+
+.process-col-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #64748B;
+  margin-bottom: 16px;
+}
+
+.editorial-process-col h4 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  margin-bottom: 10px;
+}
+
+.editorial-process-col p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #94A3B8;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .editorial-service-row {
+    grid-template-columns: 45px 1fr 30px;
+    gap: 12px;
   }
 
-  .service-card {
-    padding: 24px;
+  .service-row-desc {
+    grid-column: 2 / -1;
+  }
+
+  .editorial-process-strip {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 520px) {
-  .services-section {
-    padding: 100px 14px;
+@media (max-width: 575px) {
+  .editorial-process-strip {
+    grid-template-columns: 1fr;
   }
 
-  .services-grid {
-    gap: 18px;
+  .editorial-process-col {
+    border-inline-end: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px 0;
   }
 }

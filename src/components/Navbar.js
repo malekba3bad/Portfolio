@@ -1,28 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-// removed unused Button import; using native elements for icon actions
-import saFlag from "../Assets/saudi-arabia.svg";
-import usFlag from "../Assets/us-flag.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
-
-import { FaGithub } from "react-icons/fa";
-// import { ImBlog } from "react-icons/im";
-import {
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
-import { CgFileDocument } from "react-icons/cg";
-import { MdLanguage } from "react-icons/md";
+import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
+import { BsArrowUpRight } from "react-icons/bs";
 
 function NavBar() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [language, setLanguage] = useState(i18n.language || "en");
@@ -30,162 +15,158 @@ function NavBar() {
 
   useEffect(() => {
     function scrollHandler() {
-      if (window.scrollY >= 20) {
-        updateNavbar(true);
-      } else {
-        updateNavbar(false);
-      }
+      updateNavbar(window.scrollY >= 20);
     }
-
-    window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandler, { passive: true });
     return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
-  // keep i18n in sync with local language state
   useEffect(() => {
     if (i18n.language !== language) i18n.changeLanguage(language);
   }, [language, i18n]);
 
+  useEffect(() => {
+    updateExpanded(false);
+  }, [location.pathname]);
+
   const toggleLanguage = () => {
-    const newLang = language === "en" ? "ar" : "en";
-    setLanguage(newLang);
+    setLanguage(language === "en" ? "ar" : "en");
   };
 
-  // Grouped mobile footer buttons (reusable)
-  const MobileFooterButtons = ({ language, onToggle }) => (
-    <div className={`mobile-footer-buttons ${language === "ar" ? "rtl" : "ltr"}`}>
-      <a
-        className="mobile-github-btn"
-        href="https://github.com/malekba3bad"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Open GitHub"
-      >
-        <FaGithub />
-        <span className="btn-text">GitHub</span>
-      </a>
+  const isActive = (path) => {
+    if (path === "/") return location.pathname === "/";
+    return location.pathname.toLowerCase().startsWith(path.toLowerCase());
+  };
 
-      <button
-        className="mobile-lang-btn"
-        onClick={onToggle}
-        aria-label={language === "en" ? "Switch to Arabic" : "Switch to English"}
-        type="button"
-      >
-        <MdLanguage />
-        <img
-          src={language === "en" ? saFlag : usFlag}
-          alt={language === "en" ? "Saudi Arabia flag" : "United States flag"}
-        />
-        <span className="btn-text">{language === "en" ? "ع" : "EN"}</span>
-      </button>
-    </div>
-  );
+  const navItems = [
+    { to: "/", label: t("navbar.home") },
+    { to: "/project", label: t("navbar.projects") },
+    { to: "/Services", label: t("navbar.services") },
+    { to: "/about", label: t("navbar.about") },
+    { to: "/resume", label: t("navbar.resume") },
+  ];
 
   return (
-    <Navbar
-      expanded={expand}
-      fixed="top"
-      expand="md"
-      className={`navbar-custom ${navColour ? "sticky" : ""} ${isRTL ? "rtl" : "ltr"}`}
+    <header
+      className={`editorial-header ${navColour ? "is-scrolled" : ""}`}
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <Container className="nav-container" fluid>
-        {/* Left (or right in RTL) - logo container */}
-        <div className="nav-side nav-left">
-          <Navbar.Brand href="/" className="nav-brand d-flex">
-            <img src={logo} className="img-fluid logo" alt="brand" />
-          </Navbar.Brand>
-        </div>
+      <div className="editorial-header__inner">
+        {/* 1. Minimalist Editorial Brand */}
+        <Link
+          to="/"
+          className="editorial-brand"
+          onClick={() => updateExpanded(false)}
+        >
+          <span className="editorial-brand__dot" aria-hidden="true" />
+          <span className="editorial-brand__name">
+            {isRTL ? "مالك باعباد" : "Malek Ba Abbad"}
+          </span>
+        </Link>
 
-        {/* Center wrapper - Toggle + Collapse (links + actions inside collapse) */}
-        <div className="nav-center-wrapper">
-          <Navbar.Toggle
-            className="nav-toggle"
-            aria-controls="responsive-navbar-nav"
-            onClick={() => {
-              updateExpanded(expand ? false : "expanded");
-            }}
+        {/* 2. Borderless Typographic Navigation */}
+        <nav className="editorial-nav-desktop" aria-label="Main Navigation">
+          <ul className="editorial-nav-list">
+            {navItems.map((item) => {
+              const active = isActive(item.to);
+              return (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className={`editorial-nav-link ${active ? "is-active" : ""}`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        {/* 3. Borderless Utility Actions */}
+        <div className="editorial-header__actions">
+          <button
+            onClick={toggleLanguage}
+            className="editorial-lang-switch"
+            type="button"
+            aria-label="Switch Language"
           >
-            <span></span>
-            <span></span>
-            <span></span>
-          </Navbar.Toggle>
+            {language === "en" ? "العربية" : "EN"}
+          </button>
 
-          <Navbar.Collapse id="responsive-navbar-nav" className="nav-collapse">
-            <div className="nav-center" role="navigation">
-              <Nav defaultActiveKey="#home">
-                <Nav.Item>
-                  <Nav.Link className="nav-link-custom" as={Link} to="/" onClick={() => updateExpanded(false)}>
-                    <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("navbar.home")}
-                  </Nav.Link>
-                </Nav.Item>
+          <span className="editorial-divider-v" aria-hidden="true" />
 
-                <Nav.Item>
-                  <Nav.Link className="nav-link-custom" as={Link} to="/about" onClick={() => updateExpanded(false)}>
-                    <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("navbar.about")}
-                  </Nav.Link>
-                </Nav.Item>
+          <a
+            href="https://github.com/malekba3bad"
+            target="_blank"
+            rel="noreferrer"
+            className="editorial-action-link d-none d-sm-inline-flex"
+          >
+            <span>GitHub</span>
+            <BsArrowUpRight />
+          </a>
 
-                <Nav.Item>
-                  <Nav.Link className="nav-link-custom" as={Link} to="/Services" onClick={() => updateExpanded(false)}>
-                    <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> {t("navbar.services")}
-                  </Nav.Link>
-                </Nav.Item>
+          <a
+            href="https://wa.me/+967773250384"
+            target="_blank"
+            rel="noreferrer"
+            className="editorial-action-cta d-none d-lg-inline-flex"
+          >
+            <span>{t("navbar.hireMe")}</span>
+            <BsArrowUpRight />
+          </a>
 
-                <Nav.Item>
-                  <Nav.Link className="nav-link-custom" as={Link} to="/project" onClick={() => updateExpanded(false)}>
-                    <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> {t("navbar.projects")}
-                  </Nav.Link>
-                </Nav.Item>
-
-                <Nav.Item>
-                  <Nav.Link className="nav-link-custom" as={Link} to="/resume" onClick={() => updateExpanded(false)}>
-                    <CgFileDocument style={{ marginBottom: "2px" }} /> {t("navbar.resume")}
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
-            </div>
-
-            <div className="mobile-only mobile-panel-footer">
-              <MobileFooterButtons language={language} onToggle={() => { toggleLanguage(); updateExpanded(false); }} />
-            </div>
-          </Navbar.Collapse>
+          <button
+            type="button"
+            className="editorial-mobile-btn"
+            aria-label="Toggle Menu"
+            aria-expanded={expand}
+            onClick={() => updateExpanded(!expand)}
+          >
+            {expand ? <HiOutlineX /> : <HiOutlineMenuAlt4 />}
+          </button>
         </div>
+      </div>
 
-        {/* Right (or left in RTL) - actions container (desktop-only) */}
-        <div className="nav-side nav-right">
-          <div className="nav-actions desktop-only">
-            <Nav.Item className="fork-btn">
-              <a
-                href="https://github.com/malekba3bad"
-                target="_blank"
-                rel="noreferrer"
-                className="fork-btn-inner"
-                aria-label="Open GitHub"
-              >
-                <FaGithub style={{ width: "20px", height: "20px", verticalAlign: "middle" }} />
-              </a>
-            </Nav.Item>
-
-            <Nav.Item className="lang-item">
-              <button
-                onClick={toggleLanguage}
-                className="language-toggle-btn"
-                aria-label={language === "en" ? "Switch to Arabic" : "Switch to English"}
-                type="button"
-              >
-                <MdLanguage style={{ width: "20px", height: "20px", verticalAlign: "middle", marginRight: "6px" }} />
-                <img
-                  src={language === "en" ? saFlag : usFlag}
-                  alt={language === "en" ? "Saudi Arabia flag" : "United States flag"}
-                  style={{ width: "20px", height: "14px", objectFit: "cover" }}
-                />
-              </button>
-            </Nav.Item>
-          </div>
+      {/* Minimalist Full-Width Mobile Menu */}
+      <div className={`editorial-mobile-menu ${expand ? "is-open" : ""}`}>
+        <ul className="editorial-mobile-list">
+          {navItems.map((item, idx) => {
+            const active = isActive(item.to);
+            return (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  className={`editorial-mobile-link ${
+                    active ? "is-active" : ""
+                  }`}
+                  onClick={() => updateExpanded(false)}
+                >
+                  <span className="mobile-link-num">0{idx + 1}</span>
+                  <span>{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="editorial-mobile-footer">
+          <a
+            href="https://github.com/malekba3bad"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub ↗
+          </a>
+          <a
+            href="https://wa.me/+967773250384"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("navbar.hireMe")} ↗
+          </a>
         </div>
-      </Container>
-    </Navbar>
+      </div>
+    </header>
   );
 }
 

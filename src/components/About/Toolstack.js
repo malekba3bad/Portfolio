@@ -1,6 +1,5 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import { FiFigma } from 'react-icons/fi';
+import React from "react";
+import { FiFigma } from "react-icons/fi";
 import {
   SiVisualstudiocode,
   SiAdobexd,
@@ -10,45 +9,35 @@ import {
   SiAdobephotoshop,
   SiNpm,
   SiNotion,
-  SiXampp
-} from 'react-icons/si';
+  SiXampp,
+} from "react-icons/si";
 
 function Toolstack() {
-  return (
-    <Row style={{ justifyContent: 'center', paddingBottom: '50px' }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNpm />
-      </Col>
-<Col xs={4} md={2} className="tech-icons">
-        <SiXampp />
-      </Col>
+  const tools = [
+    { name: "VS Code", icon: <SiVisualstudiocode /> },
+    { name: "Figma", icon: <FiFigma /> },
+    { name: "Postman", icon: <SiPostman /> },
+    { name: "Vercel", icon: <SiVercel /> },
+    { name: "npm", icon: <SiNpm /> },
+    { name: "Notion", icon: <SiNotion /> },
+    { name: "XAMPP", icon: <SiXampp /> },
+    { name: "Slack", icon: <SiSlack /> },
+    { name: "Adobe XD", icon: <SiAdobexd /> },
+    { name: "Photoshop", icon: <SiAdobephotoshop /> },
+  ];
 
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-      
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
-      </Col>
-<Col xs={4} md={2} className="tech-icons">
-        <SiNotion />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAdobexd />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAdobephotoshop />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <FiFigma />
-      </Col>
-    </Row>
+  return (
+    <div className="editorial-tech-ledger">
+      {tools.map((tool, idx) => (
+        <div key={tool.name} className="ledger-item">
+          <span className="ledger-idx">
+            {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
+          </span>
+          <span className="ledger-icon">{tool.icon}</span>
+          <span className="ledger-name">{tool.name}</span>
+        </div>
+      ))}
+    </div>
   );
 }
 

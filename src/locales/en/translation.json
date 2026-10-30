@@ -4,204 +4,329 @@
     "about": "About",
     "services": "Services",
     "projects": "Projects",
-    "resume": "Resume"
+    "resume": "Resume",
+    "hireMe": "Let's Talk"
   },
   "home": {
-    "greeting": "Hi There!",
+    "badge": "Available for Projects & Technical Consulting",
+    "greeting": "Hello, I'm",
     "name": "I'M",
     "fullName": "MALEK BA ABBAD",
-    "experiences": "5 Years Experience in",
+    "roleTitle": "Senior Front-End & Full-Stack Web Engineer",
+    "subtitle": "I architect and build FinTech platforms, enterprise dashboards, and high-velocity web experiences that unite clean software engineering with interactive visual craft.",
+    "experiences": "5+ Years Experience in",
+    "ctaProjects": "Explore Projects",
+    "ctaContact": "Get in Touch",
+    "ctaResume": "View Resume",
+    "stats": {
+      "years": "5+",
+      "yearsLabel": "Years of Experience",
+      "projects": "19+",
+      "projectsLabel": "Delivered Platforms",
+      "fintech": "6+",
+      "fintechLabel": "Banking & FinTech Systems",
+      "performance": "99%",
+      "performanceLabel": "Responsive & Speed Score"
+    },
+    "featuredSection": {
+      "eyebrow": "Selected Flagship Works",
+      "title": "Featured",
+      "titleHighlight": "Case Studies",
+      "subtitle": "Banking portals, digital wallets, and enterprise management systems engineered with modern web stacks for reliability and scale.",
+      "viewAll": "Explore Full Project Archive (19 Projects)"
+    },
+    "servicesPreview": {
+      "eyebrow": "Capabilities & Solutions",
+      "title": "End-to-End Digital",
+      "titleHighlight": "Engineering",
+      "subtitle": "Transforming complex business requirements into fast, secure, and scalable web products.",
+      "viewAll": "Explore All Services in Detail"
+    },
+    "skillsPreview": {
+      "eyebrow": "Technical Arsenal",
+      "title": "Core Stack &",
+      "titleHighlight": "Ecosystem",
+      "subtitle": "Powered by React, Next.js, TypeScript, and modern styling architectures to deliver production-grade software.",
+      "moreAbout": "Learn More About My Journey"
+    },
+    "ctaBanner": {
+      "badge": "Have an upcoming project?",
+      "title": "Let's turn your vision into an",
+      "titleHighlight": "exceptional digital product",
+      "description": "Whether you need a FinTech platform, an enterprise dashboard, or a complete UI/UX & performance overhaul — I'm ready to help you ship with confidence.",
+      "whatsapp": "Chat on WhatsApp",
+      "viewProjects": "Browse All Works"
+    },
     "roles": [
-      "Corporate & Business Website Development",
-      "Full-Stack Web Development",
-      "CMS Development",
-      "Marketing Landing Pages",
-      "React / Next.js Frontend Development",
-      "API Integration",
-      "Website Hosting & Deployment",
-      "Performance & Responsive Optimization",
-      "Website Maintenance & Updates",
-      "SEO Optimization",
-      "UI/UX Design"
+      "FinTech & Banking Web Platforms",
+      "React & Next.js Frontend Architecture",
+      "Enterprise Dashboards & ERP Systems",
+      "Full-Stack Web Applications",
+      "Interactive UI/UX Engineering",
+      "Web Performance & Core Web Vitals",
+      "REST API & System Integration"
     ]
   },
   "about": {
+    "eyebrow": "Background & Expertise",
     "heading": "Know Who",
-    "headingBold": "I'M",
-    "skillsetHeading": "Professional",
+    "headingBold": "I Am",
+    "skillsetHeading": "Engineering",
     "skillsetBold": "Skillset",
-    "toolsHeading": "Tools",
-    "toolsBold": "I use",
-    "description": "Hi, I'm Malik from Yemen. I graduated from Yarmouk University in Jordan and I'm a passionate Front-End Developer with 3 years of experience in building clean, user-friendly web interfaces.",
-    "focus": "I'm specialized in HTML, CSS, and JavaScript, with a solid understanding of modern frameworks like React and Next.js. My main focus is designing and building clean, responsive code to deliver smooth, high-quality user experiences across all devices.",
-    "arabwdoss": "I currently work as a React Developer at ArabWare Dos, where I use my skills to build digital solutions. My experience includes developing key platforms and applications such as:",
-"bank": "Creating responsive interfaces for major corporate websites, including the Bin Dowal Bank website, which focuses on providing Islamic microfinance services.",
-"wallet": "Developing the Bin Dowal E-Wallet website — Yemen’s leading electronic payment gateway — using HTML, Tailwind CSS, and ReactJS.",
-"baligne": "Designing modern, responsive dashboard systems like the Ballighni app dashboard, which offers a smooth workflow for employees and features real-time data fetching from APIs.",
-"responsive": "I'm dedicated to delivering technical solutions that not only meet functional requirements but also ensure optimal accessibility and responsiveness across all devices."
-
+    "toolsHeading": "Tools &",
+    "toolsBold": "Workflow",
+    "description": "Hi, I'm Malek Ba Abbad from Yemen, a graduate of Yarmouk University in Jordan, and a passionate Front-End & Web Application Engineer with 5+ years of experience building scalable digital platforms and enterprise interfaces.",
+    "focus": "I specialize in the modern JavaScript and TypeScript ecosystem using React.js, Next.js, and Tailwind CSS, alongside practical backend and CMS experience with Laravel and MySQL. My engineering philosophy centers on clean architecture, low-bandwidth speed, and accessible, responsive user experiences.",
+    "arabwdoss": "I currently work as a React Developer at ArabWare Dos, leading frontend development for critical digital platforms and flagship systems including:",
+    "bank": "Architecting the modern web interface for Bin Dowal Islamic Microfinance Bank using Next.js, TypeScript, and Tailwind CSS.",
+    "wallet": "Developing the Bin Dowal Pay E-Wallet portal — Yemen's leading electronic payment gateway — and the interactive Gold Wallet FinTech platform.",
+    "baligne": "Engineering responsive enterprise dashboards such as the Balleghny workflow system, Enterprise HRMS, and the Interactive Digital Signage Kiosk SPA.",
+    "responsive": "I am committed to delivering technical solutions that not only fulfill complex business workflows but also guarantee accessibility, security, and lightning-fast performance across every device.",
+    "timelineTitle": "Career &",
+    "timelineHighlight": "Academic Milestones",
+    "timeline": [
+      {
+        "period": "2022 — Present",
+        "role": "Front-End Engineer (React / Next.js)",
+        "org": "ArabWare Dos Software Technologies",
+        "desc": "Leading frontend architecture for banking portals, e-wallets, and enterprise dashboards using React, Next.js, TypeScript, and Tailwind CSS."
+      },
+      {
+        "period": "2020 — Present",
+        "role": "Independent Full-Stack & UI/UX Developer",
+        "org": "Regional Enterprise & Corporate Clients",
+        "desc": "Designed, built, and deployed 19+ web platforms across FinTech, renewable energy, marine logistics, healthcare, and government sectors."
+      },
+      {
+        "period": "Bachelor's Degree",
+        "role": "University Graduate in Tech & Computing",
+        "org": "Yarmouk University — Jordan",
+        "desc": "Strong academic foundation in software engineering principles, algorithms, database systems, and web technologies."
+      }
+    ]
   },
   "projects": {
-    "heading": "My Recent",
-    "headingBold": "Works",
-    "description": "Here are a few projects I've worked on recently.",
-"progress": "Project completion level",
+    "eyebrow": "Complete Portfolio Archive",
+    "heading": "Selected",
+    "headingBold": "Works & Systems",
+    "description": "Explore 19 production websites, FinTech platforms, and enterprise dashboards engineered across diverse industries.",
+    "progress": "Project Status",
+    "searchPlaceholder": "Search by project name or technology (e.g. Next.js, Tailwind, Laravel)...",
+    "allCategories": "All",
+    "categories": {
+      "all": "All Projects",
+      "fintech": "FinTech & Banking",
+      "enterprise": "Dashboards & ERP",
+      "corporate": "Corporate & Portals",
+      "webapps": "Web Apps & Tools"
+    },
+    "status": {
+      "live": "Production Live",
+      "enterprise": "Private Enterprise",
+      "development": "In Active Dev"
+    },
+    "modal": {
+      "overview": "Project Overview",
+      "highlights": "Key Engineering Highlights",
+      "techStack": "Architecture & Tech Stack",
+      "role": "Role & Ownership",
+      "category": "Industry / Category",
+      "status": "Deployment Status",
+      "liveDemo": "Visit Live Platform",
+      "sourceCode": "Source Code (GitHub)",
+      "privateNote": "This system is a private internal enterprise application. Live public access is restricted to protect institutional data.",
+      "close": "Close Modal",
+      "viewDetails": "Case Study"
+    },
     "arabwd": {
-      "title": "Arab Ware Dos Software Company",
-      "description": "Arab Ware Dos Software Technologies Company website, showcasing the company's services and advanced tech solutions. The site provides an engaging and user-friendly interface to introduce clients to the latest technologies offered by the company."
+      "title": "ArabWare Dos Software Company",
+      "description": "Official corporate portal for ArabWare Dos Software Technologies, showcasing enterprise software solutions with smooth GSAP motion choreography and modern UI."
     },
     "balleghny": {
-      "title": "Balleghny Dashboard",
-      "description": "This dashboard system is a modern, responsive web application It provides an intuitive interface for handle employees tasks. The dashboard features secure authentication and real-time data fetching from APIs"
+      "title": "Balleghny Operations Dashboard",
+      "description": "A responsive enterprise dashboard providing an intuitive workflow for managing employee tasks and reports, featuring secure auth, real-time API syncing, and analytics charts."
     },
     "cinema": {
-      "title": "Cinema Club",
-      "description": "A modern, responsive movie discovery web application that helps users explore and find movies based on different criteria. Built with vanilla JavaScript and powered by The Movie Database (TMDB) API."
+      "title": "Cinema Club Discovery App",
+      "description": "A fast, responsive movie discovery web application enabling users to search, filter, and explore films using real-time data from The Movie Database (TMDB) API."
     },
     "binDowal": {
-      "title": "Bin Dowal Pay Wallet",
-      "description": "The leading online payment gateway in Yemen – secure financial transactions anytime, anywhere."
+      "title": "Bin Dowal Pay Digital Wallet",
+      "description": "The digital web presence for Yemen's leading online payment gateway — showcasing instant financial transfers, merchant payments, and mobile wallet capabilities."
     },
     "logistics": {
-      "title": "Bin Dowal Contracting and Logistics",
-      "description": "company specializes in general contracting, focusing on construction, building projects, infrastructure development, roadworks and maintenance, water solutions, and electrical engineering solutions."
+      "title": "Bin Dowal Contracting & Logistics",
+      "description": "Corporate web platform for a major contracting firm specializing in infrastructure, roadworks, construction, water engineering, and logistics services."
     },
     "radiation": {
-      "title": "Mukalla Radiation Center",
-      "description": "A streamlined design that provides easy access to critical information about their radiotherapy services."
+      "title": "Mukalla Charitable Radiation Center",
+      "description": "An accessible healthcare portal designed to provide patients and donors with clear, immediate access to radiotherapy services, medical guidance, and contact forms."
     },
     "dalil": {
-      "title": "Employees Information System",
-      "description": "An integrated platform for easily and efficiently searching for bank employees. Search by entering the employee's name, job title, telephone number, or even mobile number and email."
+      "title": "Dalil — Bank Employee Directory System",
+      "description": "An integrated internal enterprise directory enabling instant multi-criteria search for bank personnel by name, role, extension, mobile number, or department."
     },
     "mikrotik": {
-      "title": "Mikrotik Login Page",
-      "description": "Design and develop a login page for local MikroTik networks to access the internet using prepaid cards."
+      "title": "MikroTik Hotspot Captive Portal",
+      "description": "Ultra-lightweight, responsive captive portal login interface engineered for local MikroTik networks using prepaid access cards."
     },
     "bank": {
-      "title": "Bin Dowal's Bank",
-      "description": "Bin Dowal's Bank website offers a clean, user-friendly interface that focuses on providing access to Islamic microfinance solutions."
+      "title": "Bin Dowal Bank (Foundational Portal)",
+      "description": "First-generation bilingual banking portal providing accessible information on Islamic microfinance services and retail banking products."
     },
     "arab": {
-      "title": "Arab Exchange Company",
-      "description": "Offers banking services compliant with Central Bank regulations."
+      "title": "Al-Arab Exchange & Remittance Co.",
+      "description": "Financial services landing platform presenting currency exchange and remittance solutions compliant with Central Bank regulations."
     },
     "sahel": {
-      "title": "Sahel Sports Club",
-      "description": "A responsive website that provides information about the Sahel Sports Club, including team details, match results, news, and images."
+      "title": "Sahel Sports Club Portal",
+      "description": "Dynamic sports club platform built with Next.js and TypeScript showcasing match results, squad profiles, club news, and tournament photo galleries."
     },
     "meoh": {
       "title": "Interactive Digital Kiosk SPA",
-      "description": "Designed and developed an interactive digital kiosk application with its own dashboard to serve as a live display platform for showcasing visual news in offices and institutions (like the Ministry of Education). The application features images, videos, a news ticker, sections for upcoming events, and statistics. It is compatible with smart display screens."
+      "description": "Live digital signage application with a custom Laravel CMS dashboard designed for smart displays in government offices (Ministry of Education), featuring live video feeds, breaking news tickers, event schedules, and real-time metrics."
     },
     "newBank": {
       "title": "Bin Dowal Islamic Microfinance Bank",
-      "description": "Designed and developed a new user interface for Bin Dowal Bank using NextJS, Tailwind CSS, and Typescript. The new interface aims to enhance user experience and provide a modern, responsive design that better meets customer needs."
+      "description": "Next-generation banking web platform engineered with Next.js, TypeScript, and Tailwind CSS to deliver a fast, trustworthy, and accessible digital banking experience."
     },
     "prince": {
-      "title": "Prince Line for Marine Navigation and Supply",
-      "description": "Enhancing user experience and providing a modern, responsive design that better meets customer needs."
+      "title": "Prince Line Marine Navigation & Supply",
+      "description": "Modern responsive corporate platform for a maritime shipping and vessel supply company operating across regional ports."
     },
     "gold": {
-      "title": "Gold Wallet Platform",
-      "description": "A financial platform for managing gold, wallets, customers, transactions, approvals, and reports. Developed using NextJS, Tailwind CSS, and Typescript, with integrated APIs to create a seamless and interactive user experience. Features include interactive charts, authentication system, and a content management system (CMS) for easy platform management."
+      "title": "Gold Wallet FinTech Platform",
+      "description": "Comprehensive financial platform for managing digital gold portfolios, customer wallets, bullion transactions, multi-tier approvals, and analytics reports — built with Next.js, TypeScript, Tailwind CSS, interactive charts, and custom CMS."
     },
     "port": {
-      "title": "Hadhramaut Shipping Company",
-      "description": "A simple interface for a company that provides cleaning services in Yemen"
+      "title": "Hadhramaut Marine Shipping Company",
+      "description": "Streamlined responsive corporate interface for a maritime agency providing ship chandling, vessel supply, and port logistics services in Yemen."
     },
     "bindowalsolar": {
       "title": "Bin Dowal Renewable Energy Company",
-      "description": "Designed and developed a new user interface for Bin Dowal Renewable Energy Company using NextJS, Tailwind CSS, and Typescript. The new interface aims to enhance user experience and provide a modern, responsive design that better meets customer needs."
+      "description": "Modern corporate platform built with Next.js, TypeScript, and Tailwind CSS showcasing solar power engineering, clean energy products, and commercial installations."
     },
     "HRMS": {
-      "title": "Human Resource Management System",
-      "description": "A comprehensive system for managing human resources, developed using React, Tailwind CSS, and Typescript. The system provides a user-friendly interface for managing employee affairs, tracking attendance and leave, managing payroll, and generating reports. The system is designed to meet the needs of small and medium-sized businesses, providing a seamless and efficient user experience."
+      "title": "Enterprise Human Resource Management (HRMS)",
+      "description": "Full-featured HR management platform developed with React, TypeScript, and Tailwind CSS for managing employee records, attendance tracking, leave workflows, payroll processing, and executive reports."
     },
     "Inventory": {
-      "title": "Inventory Management System",
-      "description": "A comprehensive system for managing inventory, developed using React, Tailwind CSS, and Typescript. The system provides a user-friendly interface for managing inventory, tracking attendance and leave, managing payroll, and generating reports. The system is designed to meet the needs of small and medium-sized businesses, providing a seamless and efficient user experience."
+      "title": "Inventory & Warehouse Management System",
+      "description": "Comprehensive warehouse and stock control system designed to track incoming/outgoing inventory, low-stock alerts, supplier invoices, and real-time stock auditing for SMEs."
     }
   },
   "services": {
+    "eyebrow": "Professional Services",
     "heading": "What",
-    "headingBold": "I offer",
-    "description": "A clean, modern service collection for quality web experiences.",
+    "headingBold": "I Offer",
+    "description": "End-to-end software engineering services from interactive UI/UX architecture to cloud deployment and performance optimization.",
+    "processTitle": "Engineering",
+    "processHighlight": "Workflow & Process",
+    "process": [
+      {
+        "step": "01",
+        "title": "Discovery & UX Architecture",
+        "desc": "Understanding business goals, mapping user flows, and crafting an intuitive, high-contrast interface."
+      },
+      {
+        "step": "02",
+        "title": "Modern Frontend & Full-Stack Build",
+        "desc": "Writing clean, modular code with React, Next.js, and TypeScript with native bilingual RTL/LTR support."
+      },
+      {
+        "step": "03",
+        "title": "API Integration & Speed Optimization",
+        "desc": "Connecting data layers securely while optimizing bundle sizes and assets for instant loading on any connection."
+      },
+      {
+        "step": "04",
+        "title": "Cloud Launch & Continuous Evolution",
+        "desc": "Deploying with automated CI/CD, technical SEO setup, and ongoing performance monitoring."
+      }
+    ],
     "portfolio": {
-      "title": "Professional Portfolio Websites",
-      "description": "Build polished portfolio sites focused on personal branding and clarity."
+      "title": "Interactive Brand & Portfolio Websites",
+      "description": "Build distinctive, motion-enhanced portfolio sites focused on personal branding and clarity."
     },
     "corporate": {
-      "title": "Corporate & Business Websites",
-      "description": "Craft modern corporate websites that reflect your brand and support growth."
+      "title": "Corporate & Enterprise Web Portals",
+      "description": "Craft authoritative corporate and banking websites that elevate brand trust and drive growth."
     },
     "fullstack": {
       "title": "Full-Stack Web Development",
-      "description": "End-to-end web development services, from frontend design to backend implementation."
+      "description": "End-to-end web application engineering from interactive frontends to Laravel/SQL backends."
     },
     "system": {
-      "title": "System & Dashboard Development",
-      "description": "Design and develop custom systems and dashboards tailored to your business needs."
+      "title": "Enterprise Dashboards & ERP Systems",
+      "description": "Design and build data-rich management systems, HRMS, and financial dashboards."
     },
     "marketing": {
-      "title": "Marketing Landing Pages",
-      "description": "Design conversion-focused landing pages that capture attention and drive action."
+      "title": "High-Conversion Landing Pages",
+      "description": "Engineer fast, GSAP-animated marketing pages designed to capture attention and convert visitors."
     },
     "react": {
-      "title": "React / Next.js Frontend Development",
-      "description": "Deliver fast, scalable interfaces with reusable React and Next.js components."
+      "title": "React & Next.js Architecture",
+      "description": "Deliver scalable, maintainable interfaces with modern React, Next.js, and TypeScript patterns."
     },
     "api": {
-      "title": "API Integration",
-      "description": "Connect frontends to APIs for smooth data flow and reliable interactions."
+      "title": "API & FinTech System Integration",
+      "description": "Connect frontends to RESTful APIs with robust state management, caching, and auth flows."
     },
     "hosting": {
-      "title": "Website Hosting & Deployment",
-      "description": "Provide secure hosting and deployment services to ensure your website runs smoothly."
+      "title": "Cloud Deployment & CI/CD Setup",
+      "description": "Configure fast, secure hosting on Vercel, Netlify, or custom servers with SSL and CDN caching."
     },
     "performance": {
-      "title": "Performance & Responsive Optimization",
-      "description": "Improve load speed and responsiveness across every screen size."
+      "title": "Low-Bandwidth & Web Vitals Optimization",
+      "description": "Optimize load times, code-splitting, and assets so your platform flies even on slow networks."
     },
     "maintenance": {
-      "title": "Website Maintenance & Updates",
-      "description": "Keep your website secure and current with regular maintenance and updates."
+      "title": "Platform Maintenance & Upgrades",
+      "description": "Keep your web applications secure, modern, and bug-free with proactive technical support."
     },
     "seo": {
-      "title": "SEO Optimization",
-      "description": "Enhance your website's visibility and ranking on search engines with effective SEO strategies."
+      "title": "Technical SEO & Accessibility",
+      "description": "Implement semantic structure, metadata, and WCAG accessibility for maximum organic reach."
     },
     "uiux": {
-      "title": "UI/UX Design",
-      "description": "Craft visually appealing and user-friendly interfaces that enhance user experience."
+      "title": "UI/UX Design Systems",
+      "description": "Create cohesive dark/light design systems, component libraries, and micro-interactions."
     }
   },
- "home2": {
-  "introduction": "HEY, I'M",
-  "intro_bold": "GLAD YOU'RE HERE",
-  "passion": "I'm all about front-end development and design — always experimenting, learning, and building cool things. 🎨💻",
-  "fluent": "I work comfortably with modern tools like",
-  "fluent_bold": "React JS and Next JS.",
-  "interest": "I enjoy creating clean, user-friendly interfaces and smooth, enjoyable web experiences.",
-  "interest_ui": "clean, user-friendly interfaces",
-  "interest_build": "smooth and enjoyable web experiences.",
-  "designs": "Whenever I can, I bring ideas to life using",
-  "designs_bold": "modern front-end libraries",
-  "and": "and",
-  "frameworks": " frameworks.",
-  "findme": "FIND ME ON",
-  "connect": "Feel free to",
-  "connect_bold": "reach out",
-  "with_me": "anytime!"
-},
-
-  
+  "home2": {
+    "introduction": "HEY, I'M",
+    "intro_bold": "GLAD YOU'RE HERE",
+    "passion": "I'm passionate about front-end engineering and interaction design — uniting clean software architecture with visual polish.",
+    "fluent": "I build fluently with modern technologies including",
+    "fluent_bold": "React.js, Next.js, and TypeScript.",
+    "interest": "I specialize in crafting",
+    "interest_ui": "intuitive enterprise interfaces",
+    "interest_build": "high-speed, accessible web experiences.",
+    "designs": "Whenever I build, I bring ideas to life using",
+    "designs_bold": "modern frontend architectures",
+    "and": "and",
+    "frameworks": "scalable frameworks.",
+    "findme": "CONNECT WITH ME",
+    "connect": "Feel free to",
+    "connect_bold": "reach out",
+    "with_me": "for collaborations!"
+  },
+  "resume": {
+    "eyebrow": "Curriculum Vitae",
+    "title": "Professional",
+    "titleHighlight": "Resume",
+    "subtitle": "Preview my resume directly in your browser or download a high-resolution PDF copy.",
+    "download": "Download Resume (PDF)",
+    "loadingPdf": "Preparing interactive PDF viewer..."
+  },
   "footer": {
-    "developed": "Developed by Malek Ba Abbad",
-    "copyright": "Copyright ©"
+    "developed": "Designed & Engineered by Malek Ba Abbad",
+    "copyright": "Copyright ©",
+    "tagline": "Senior Front-End & Web Application Engineer — Crafting fast, resilient digital products."
   },
   "common": {
-    "demo": "Demo",
-    "github": "GitHub"
+    "demo": "Live Demo",
+    "github": "GitHub",
+    "details": "Case Study"
   }
 }

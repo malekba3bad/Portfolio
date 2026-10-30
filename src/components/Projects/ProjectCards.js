@@ -1,93 +1,68 @@
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { CgWebsite } from 'react-icons/cg';
-import { BsGithub } from 'react-icons/bs';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import { BsArrowUpRight } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 function ProjectCards(props) {
   const { t } = useTranslation();
-  const progress =
-    typeof props.progress === 'number'
-      ? Math.min(100, Math.max(0, props.progress))
-      : null;
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  const status = props.status || "live";
+  const statusLabel = t(`projects.status.${status}`);
+  const categoryLabel = props.category
+    ? t(`projects.categories.${props.category}`)
+    : null;
+
+  const handleCardClick = () => {
+    if (props.onSelect) {
+      props.onSelect();
+    }
+  };
+
   return (
-    <Card className="project-card-view">
-      <Card.Img
-        variant="top"
-        src={props.imgPath}
-        alt="card-img"
-        loading="lazy"
-      />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: 'justify' }}>
-          {props.description}
-        </Card.Text>
+    <article className="editorial-project-item" onClick={handleCardClick}>
+      {/* Borderless Large Showcase Image */}
+      <div className="editorial-project-media">
+        {!imgLoaded && <div className="project-img-skeleton" />}
+        <img
+          src={props.imgPath}
+          alt={props.title}
+          loading="lazy"
+          decoding="async"
+          onLoad={() => setImgLoaded(true)}
+          className={`editorial-project-img ${imgLoaded ? "is-loaded" : ""}`}
+        />
+      </div>
+
+      {/* Open Typographic Meta & Content (Zero Borders, Zero Pills) */}
+      <div className="editorial-project-content">
+        <div className="editorial-project-meta">
+          <span className="meta-text">
+            {props.indexNum && (
+              <span className="meta-index">{props.indexNum} — </span>
+            )}
+            {categoryLabel}
+            <span className="meta-sep">·</span>
+            <span className={`meta-status meta-status--${status}`}>
+              {statusLabel}
+            </span>
+          </span>
+
+          <span className="editorial-project-arrow" aria-hidden="true">
+            <BsArrowUpRight />
+          </span>
+        </div>
+
+        <h3 className="editorial-project-title">{props.title}</h3>
+        <p className="editorial-project-desc">{props.description}</p>
+
         {Array.isArray(props.techStack) && props.techStack.length > 0 && (
-          <div className="project-tech-badges">
-            {props.techStack.map((tech) => (
-              <span className="project-tech-badge" key={tech}>
-                {tech}
-              </span>
-            ))}
+          <div className="editorial-project-stack">
+            {props.techStack.join("  ·  ")}
           </div>
         )}
-        <br/>
-        {progress !== null && (
-          <div
-            className="project-progress"
-            aria-label={`Project progress ${Math.round(progress)}%`}
-          >
-            <div className="project-progress__meta">
-              <span className="project-progress__label">{t("projects.progress")}</span>
-              <span className="project-progress__value">
-                {Math.round(progress)}%
-              </span>
-            </div>
-            <div className="project-progress__rail">
-              <span
-                className="project-progress__fill"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
-          </div>
-        )}
-<br/>
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-        {!props.isBlog && props.ghLink && (
-          <Button
-            variant="primary"
-            href={props.ghLink}
-            target="_blank"
-            style={{ marginLeft: '10px' }}
-          >
-            <BsGithub /> &nbsp;
-            {t('common.github')}
-          </Button>
-        )}
-
-        {/* <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? 'Blog' : t('common.github')}
-        </Button> */}
-        {'\n'}
-        {'\n'}
-
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: '10px' }}
-          >
-            <CgWebsite /> &nbsp;
-            {t('common.demo')}
-          </Button>
-        )}
-      </Card.Body>
-    </Card>
+      </div>
+    </article>
   );
 }
+
 export default ProjectCards;

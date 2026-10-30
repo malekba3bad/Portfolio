@@ -1,8 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap");
+:root {
+  --bg-obsidian: #08090C;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-subtle: #64748B;
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-strong: rgba(255, 255, 255, 0.16);
+  --font-en: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-ar: "IBM Plex Sans Arabic", "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-obsidian);
+}
+
 body {
   margin: 0;
-  font-family: "Cairo", serif !important;
+  font-family: var(--font-en);
+  background-color: var(--bg-obsidian);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  overflow-x: hidden;
+}
+
+body.rtl-mode,
+[dir="rtl"] {
+  font-family: var(--font-ar);
 }

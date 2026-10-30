@@ -1,43 +1,31 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 function AboutCard() {
   const { t } = useTranslation();
   return (
-    <Card className="quote-card-view">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: 'justify' }}>
-            {t('about.description')}
-            <br />
-            <br />
-            {t('about.focus')}
-            <br />
-            <br />
-            {t('about.arabwdoss')}
-          </p>
-          <ul>
-            <li className="about-activity">
-              1-
-              <span> {t('about.bank')}</span>
-            </li>
-            <br />
-            <li className="about-activity">
-              2-
-              <span> {t('about.wallet')} </span>
-            </li>
-            <br />
-            <li className="about-activity">
-              3-
-              <span> {t('about.baligne')} </span>
-            </li>
-          </ul>
+    <div className="editorial-about-content">
+      <p className="about-lead-paragraph">{t("about.description")}</p>
+      <p className="about-body-paragraph">{t("about.focus")}</p>
+      <p className="about-body-paragraph">{t("about.arabwdoss")}</p>
 
-          <p style={{ textAlign: 'justify' }}>{t('about.responsive')}</p>
-        </blockquote>
-      </Card.Body>
-    </Card>
+      <ol className="editorial-numbered-list my-4">
+        <li className="editorial-numbered-item">
+          <span className="numbered-idx">01</span>
+          <span>{t("about.bank")}</span>
+        </li>
+        <li className="editorial-numbered-item">
+          <span className="numbered-idx">02</span>
+          <span>{t("about.wallet")}</span>
+        </li>
+        <li className="editorial-numbered-item">
+          <span className="numbered-idx">03</span>
+          <span>{t("about.baligne")}</span>
+        </li>
+      </ol>
+
+      <p className="about-footer-paragraph">{t("about.responsive")}</p>
+    </div>
   );
 }
 
