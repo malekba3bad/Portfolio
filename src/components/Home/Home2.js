@@ -14,7 +14,53 @@ function Home2() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedScope, setSelectedScope] = useState("fintech");
+  const [briefNote, setBriefNote] = useState("");
   const sectionsRef = useRef(null);
+
+  const inquiryScopes = [
+    {
+      id: "fintech",
+      ar: "منصة بنكية / مالية (FinTech)",
+      en: "FinTech & Banking Platform",
+    },
+    {
+      id: "erp",
+      ar: "نظام مؤسسي / لوحة تحكم (ERP)",
+      en: "Enterprise ERP & Dashboard",
+    },
+    {
+      id: "webapp",
+      ar: "تطبيق ويب (React / Next.js / Laravel)",
+      en: "Full-Stack Web App (React / Next.js)",
+    },
+    {
+      id: "corporate",
+      ar: "موقع رسمي لشركة أو مؤسسة",
+      en: "Corporate & Official Portal",
+    },
+    {
+      id: "uiux",
+      ar: "تطوير واجهات واستشارة تقنية",
+      en: "UI/UX & Technical Consultation",
+    },
+  ];
+
+  const activeScopeObj =
+    inquiryScopes.find((s) => s.id === selectedScope) || inquiryScopes[0];
+  const scopeLabel = isRTL ? activeScopeObj.ar : activeScopeObj.en;
+
+  const whatsappMessage = isRTL
+    ? `مرحباً مهندس مالك، أتواصل معك بخصوص مشروع: (${scopeLabel})${
+        briefNote.trim() ? `\nتفاصيل إضافية: ${briefNote.trim()}` : ""
+      }`
+    : `Hello Eng. Malek, I'm reaching out regarding a project: (${scopeLabel})${
+        briefNote.trim() ? `\nAdditional details: ${briefNote.trim()}` : ""
+      }`;
+
+  const whatsappHref = `https://wa.me/967773250384?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   const featuredProjects = PROJECTS_DATA.filter((p) => p.featured);
 
@@ -280,9 +326,51 @@ function Home2() {
               {t("home.ctaBanner.description")}
             </p>
 
+            {/* Minimalist Quick Project Inquiry Selector */}
+            <div className="quick-inquiry-wrap">
+              <span className="quick-inquiry-label">
+                {isRTL
+                  ? "حدد نوع المشروع لتجهيز رسالة تواصل مباشرة:"
+                  : "Select your project scope to prepare a direct message:"}
+              </span>
+              <div className="quick-inquiry-scopes" role="group">
+                {inquiryScopes.map((scope) => (
+                  <button
+                    key={scope.id}
+                    type="button"
+                    className={`quick-scope-btn ${
+                      selectedScope === scope.id ? "is-selected" : ""
+                    }`}
+                    onClick={() => setSelectedScope(scope.id)}
+                  >
+                    {isRTL ? scope.ar : scope.en}
+                  </button>
+                ))}
+              </div>
+
+              <div className="quick-inquiry-input-wrap">
+                <input
+                  type="text"
+                  className="quick-inquiry-input"
+                  value={briefNote}
+                  onChange={(e) => setBriefNote(e.target.value)}
+                  placeholder={
+                    isRTL
+                      ? "اسم الجهة أو ملاحظة مختصرة عن المشروع (اختياري)..."
+                      : "Company name or brief note about your project (optional)..."
+                  }
+                  aria-label={
+                    isRTL
+                      ? "اسم الجهة أو ملاحظة مختصرة"
+                      : "Company name or brief note"
+                  }
+                />
+              </div>
+            </div>
+
             <div className="editorial-contact-actions">
               <a
-                href="https://wa.me/+967773250384"
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-editorial-solid"

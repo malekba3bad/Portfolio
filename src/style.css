@@ -1075,7 +1075,76 @@
   font-size: 1.06rem;
   line-height: 1.8;
   color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Minimalist Quick Project Inquiry (Zero Box Clutter) */
+.quick-inquiry-wrap {
+  max-width: 780px;
   margin-bottom: 2.2rem;
+}
+
+.quick-inquiry-label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--text-subtle);
+  margin-bottom: 14px;
+}
+
+.quick-inquiry-scopes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-bottom: 22px;
+}
+
+.quick-scope-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--hairline);
+  padding: 6px 0;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.quick-scope-btn:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--text-secondary);
+}
+
+.quick-scope-btn.is-selected {
+  color: var(--accent-primary);
+  font-weight: 700;
+  border-bottom-color: var(--accent-primary);
+}
+
+.quick-inquiry-input-wrap {
+  max-width: 560px;
+}
+
+.quick-inquiry-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--hairline-strong);
+  padding: 10px 0;
+  font-size: 0.96rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.quick-inquiry-input::placeholder {
+  color: var(--text-subtle);
+}
+
+.quick-inquiry-input:focus {
+  border-bottom-color: var(--accent-primary);
 }
 
 .editorial-contact-actions {
