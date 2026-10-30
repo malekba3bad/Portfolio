@@ -1,14 +1,60 @@
-:root {
-  --bg-obsidian: #08090C;
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
-  --text-muted: #94A3B8;
-  --text-subtle: #64748B;
-  --hairline: rgba(255, 255, 255, 0.08);
-  --hairline-strong: rgba(255, 255, 255, 0.16);
+:root,
+[data-theme="sunlit"] {
+  --bg-canvas: #FAF7F2;
+  --bg-subtle: #F2ECE1;
+  --bg-elevated: rgba(250, 247, 242, 0.86);
+  --bg-modal: #FAF7F2;
+  --bg-hover-row: rgba(224, 90, 71, 0.045);
+  --text-primary: #141824;
+  --text-secondary: #2D3648;
+  --text-muted: #5A657A;
+  --text-subtle: #8490A5;
+  --accent-primary: #E05A47; /* Warm Terracotta Coral */
+  --accent-secondary: #2563EB; /* Calm Ocean Blue */
+  --accent-teal: #15806A; /* Natural Botanical Emerald */
+  --btn-bg: #141824;
+  --btn-text: #FAF7F2;
+  --btn-hover-bg: #E05A47;
+  --btn-hover-text: #FFFFFF;
+  --hairline: rgba(20, 24, 36, 0.09);
+  --hairline-strong: rgba(20, 24, 36, 0.18);
+  --media-shadow: 0 22px 48px -14px rgba(20, 24, 36, 0.11);
+  --media-shadow-hover: 0 28px 60px -12px rgba(224, 90, 71, 0.18);
+  --ambient-mesh:
+    radial-gradient(circle at 12% 8%, rgba(244, 162, 97, 0.18), transparent 42%),
+    radial-gradient(circle at 88% 16%, rgba(59, 130, 246, 0.1), transparent 44%),
+    radial-gradient(circle at 50% 60%, rgba(224, 90, 71, 0.07), transparent 50%);
   --font-en: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-ar: "IBM Plex Sans Arabic", "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Warm Twilight Dusk Mode (No gloomy pitch-black!) */
+[data-theme="dusk"] {
+  --bg-canvas: #15192B;
+  --bg-subtle: #1D233B;
+  --bg-elevated: rgba(21, 25, 43, 0.86);
+  --bg-modal: #181D31;
+  --bg-hover-row: rgba(244, 132, 95, 0.06);
+  --text-primary: #FDFBF7;
+  --text-secondary: #E2E8F0;
+  --text-muted: #A3B1C6;
+  --text-subtle: #7686A1;
+  --accent-primary: #F4845F; /* Warm Sunset Coral */
+  --accent-secondary: #60A5FA; /* Soft Sky Blue */
+  --accent-teal: #34D399;
+  --btn-bg: #FDFBF7;
+  --btn-text: #15192B;
+  --btn-hover-bg: #F4845F;
+  --btn-hover-text: #15192B;
+  --hairline: rgba(253, 251, 247, 0.1);
+  --hairline-strong: rgba(253, 251, 247, 0.2);
+  --media-shadow: 0 22px 48px -14px rgba(7, 10, 20, 0.45);
+  --media-shadow-hover: 0 28px 60px -12px rgba(244, 132, 95, 0.22);
+  --ambient-mesh:
+    radial-gradient(circle at 14% 10%, rgba(244, 132, 95, 0.14), transparent 42%),
+    radial-gradient(circle at 86% 18%, rgba(96, 165, 250, 0.12), transparent 44%),
+    radial-gradient(circle at 50% 65%, rgba(244, 162, 97, 0.08), transparent 50%);
 }
 
 *,
@@ -19,17 +65,23 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-obsidian);
+  background-color: var(--bg-canvas) !important;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-body {
+body,
+.App {
   margin: 0;
+  min-height: 100vh;
   font-family: var(--font-en);
-  background-color: var(--bg-obsidian);
-  color: var(--text-primary);
+  background-color: var(--bg-canvas) !important;
+  background-image: var(--ambient-mesh) !important;
+  background-attachment: fixed;
+  color: var(--text-primary) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 body.rtl-mode,

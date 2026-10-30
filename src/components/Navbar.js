@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navbar.css";
-import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
+import {
+  HiOutlineMenuAlt4,
+  HiOutlineX,
+  HiOutlineSun,
+  HiOutlineMoon,
+} from "react-icons/hi";
 import { BsArrowUpRight } from "react-icons/bs";
 
 function NavBar() {
@@ -11,6 +16,9 @@ function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const [language, setLanguage] = useState(i18n.language || "en");
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("portfolio_theme") || "sunlit"
+  );
   const isRTL = language === "ar";
 
   useEffect(() => {
@@ -25,12 +33,25 @@ function NavBar() {
     if (i18n.language !== language) i18n.changeLanguage(language);
   }, [language, i18n]);
 
+  // Apply theme attribute to <html> and clear any legacy inline body styles
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    document.body.setAttribute("data-theme", theme);
+    document.body.style.backgroundColor = "";
+    document.body.style.color = "";
+    localStorage.setItem("portfolio_theme", theme);
+  }, [theme]);
+
   useEffect(() => {
     updateExpanded(false);
   }, [location.pathname]);
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "ar" : "en");
+  };
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "sunlit" ? "dusk" : "sunlit"));
   };
 
   const isActive = (path) => {
@@ -52,7 +73,7 @@ function NavBar() {
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="editorial-header__inner">
-        {/* 1. Minimalist Editorial Brand */}
+        {/* 1. Warm Editorial Brand */}
         <Link
           to="/"
           className="editorial-brand"
@@ -83,8 +104,30 @@ function NavBar() {
           </ul>
         </nav>
 
-        {/* 3. Borderless Utility Actions */}
+        {/* 3. Utility Actions (Theme Toggle + Language Switcher + Links) */}
         <div className="editorial-header__actions">
+          <button
+            onClick={toggleTheme}
+            className="editorial-theme-switch"
+            type="button"
+            aria-label={
+              theme === "sunlit"
+                ? "Switch to Warm Dusk mode"
+                : "Switch to Warm Sunlit mode"
+            }
+            title={
+              theme === "sunlit"
+                ? isRTL
+                  ? "وضع الشفق المسائي الدافئ"
+                  : "Warm Dusk Mode"
+                : isRTL
+                ? "الوضع المشرق الدافئ"
+                : "Warm Sunlit Mode"
+            }
+          >
+            {theme === "sunlit" ? <HiOutlineMoon /> : <HiOutlineSun />}
+          </button>
+
           <button
             onClick={toggleLanguage}
             className="editorial-lang-switch"

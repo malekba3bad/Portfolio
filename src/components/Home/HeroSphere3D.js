@@ -36,53 +36,92 @@ function HeroSphere3D() {
     const mainGroup = new THREE.Group();
     scene.add(mainGroup);
 
-    // 1. Outer Morphing Architectural Wireframe (Refined Silver-Ice)
+    const getPalette = () => {
+      const isDusk =
+        document.documentElement.getAttribute("data-theme") === "dusk";
+      return isDusk
+        ? {
+            outer: "#93C5FD",
+            outerOpacity: 0.28,
+            points: "#FDE68A",
+            inner: "#F4845F",
+            innerOpacity: 0.35,
+            ring: "#F4A261",
+          }
+        : {
+            outer: "#1E3A8A", // Deep Ocean Indigo on Warm Cream
+            outerOpacity: 0.24,
+            points: "#E05A47", // Warm Terracotta Coral nodes
+            inner: "#E05A47", // Terracotta inner core
+            innerOpacity: 0.34,
+            ring: "#D97706", // Warm Amber ring
+          };
+    };
+
+    const initialPalette = getPalette();
+
+    // 1. Outer Morphing Architectural Wireframe
     const outerGeo = new THREE.IcosahedronGeometry(1.56, 4);
     const posAttr = outerGeo.attributes.position;
     const basePositions = new Float32Array(posAttr.array.length);
     basePositions.set(posAttr.array);
 
     const outerMat = new THREE.MeshBasicMaterial({
-      color: new THREE.Color("#CBD5E1"),
+      color: new THREE.Color(initialPalette.outer),
       wireframe: true,
       transparent: true,
-      opacity: 0.22,
+      opacity: initialPalette.outerOpacity,
     });
     const outerMesh = new THREE.Mesh(outerGeo, outerMat);
     mainGroup.add(outerMesh);
 
-    // 2. Subtle Vertex Points
+    // 2. Coral / Gold Vertex Points
     const pointsMat = new THREE.PointsMaterial({
-      color: new THREE.Color("#F8FAFC"),
-      size: 0.028,
+      color: new THREE.Color(initialPalette.points),
+      size: 0.036,
       transparent: true,
-      opacity: 0.65,
+      opacity: 0.85,
     });
     const surfacePoints = new THREE.Points(outerGeo, pointsMat);
     mainGroup.add(surfacePoints);
 
-    // 3. Inner Geometric Core
+    // 3. Inner Geometric Core (Warm Terracotta Coral)
     const innerGeo = new THREE.OctahedronGeometry(0.86, 2);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: new THREE.Color("#38BDF8"),
+      color: new THREE.Color(initialPalette.inner),
       wireframe: true,
       transparent: true,
-      opacity: 0.2,
+      opacity: initialPalette.innerOpacity,
     });
     const innerMesh = new THREE.Mesh(innerGeo, innerMat);
     mainGroup.add(innerMesh);
 
-    // 4. Delicate Orbital Hairline Ring
-    const ringGeo = new THREE.TorusGeometry(2.12, 0.005, 16, 140);
+    // 4. Delicate Orbital Ring
+    const ringGeo = new THREE.TorusGeometry(2.12, 0.006, 16, 140);
     const ringMat = new THREE.MeshBasicMaterial({
-      color: new THREE.Color("#94A3B8"),
+      color: new THREE.Color(initialPalette.ring),
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.32,
     });
     const ring = new THREE.Mesh(ringGeo, ringMat);
     ring.rotation.x = Math.PI / 2.5;
     ring.rotation.y = Math.PI / 9;
     mainGroup.add(ring);
+
+    // Watch theme changes live so 3D sculpture adapts immediately
+    const themeObserver = new MutationObserver(() => {
+      const p = getPalette();
+      outerMat.color.set(p.outer);
+      outerMat.opacity = p.outerOpacity;
+      pointsMat.color.set(p.points);
+      innerMat.color.set(p.inner);
+      innerMat.opacity = p.innerOpacity;
+      ringMat.color.set(p.ring);
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
 
     let targetX = 0;
     let targetY = 0;
@@ -164,6 +203,7 @@ function HeroSphere3D() {
     return () => {
       cancelAnimationFrame(animFrameId);
       observer.disconnect();
+      themeObserver.disconnect();
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("resize", handleResize);
       outerGeo.dispose();
@@ -183,6 +223,7 @@ function HeroSphere3D() {
 
   return (
     <div className="hero-sphere-wrapper" aria-hidden="true">
+      <div className="hero-sphere-warm-aura" />
       <div ref={mountRef} className="hero-sphere-canvas" />
     </div>
   );

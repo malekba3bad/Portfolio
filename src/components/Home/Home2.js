@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import myImg from "../../Assets/avatar.png";
+import myImg from "../../Assets/avatar.webp";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "../Projects/ProjectCards";
 import ProjectModal from "../Projects/ProjectModal";

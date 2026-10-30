@@ -1,6 +1,5 @@
 /* ==========================================================================
-   EDITORIAL SERVICES & WORKFLOW ARCHITECTURE (Services.css)
-   Zero boxes, zero glowing icon squares — pure hairline rows & typography
+   WARM EDITORIAL SERVICES & WORKFLOW ARCHITECTURE (Services.css)
    ========================================================================== */
 
 .services-section {
@@ -12,7 +11,7 @@
 
 /* Interactive Full-Width Hairline Service Rows */
 .editorial-services-list {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--hairline-strong);
 }
 
 .editorial-service-row {
@@ -20,39 +19,36 @@
   grid-template-columns: 60px 1.15fr 1.6fr 40px;
   align-items: baseline;
   gap: 24px;
-  padding: 28px 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 28px 16px;
+  border-bottom: 1px solid var(--hairline);
   text-decoration: none !important;
   text-align: start;
-  transition: background-color 0.25s ease, padding 0.25s ease;
+  transition: background-color 0.25s ease;
 }
 
 .editorial-service-row:hover {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: var(--bg-hover-row);
 }
 
 .service-row-num {
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  color: #64748B;
+  font-weight: 600;
+  color: var(--accent-primary);
   direction: ltr;
-  transition: color 0.25s ease;
-}
-
-.editorial-service-row:hover .service-row-num {
-  color: #F8FAFC;
 }
 
 .service-row-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin: 0;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
 }
 
 .editorial-service-row:hover .service-row-title {
   transform: translateX(6px);
+  color: var(--accent-primary);
 }
 
 [dir="rtl"] .editorial-service-row:hover .service-row-title {
@@ -62,19 +58,19 @@
 .service-row-desc {
   font-size: 0.96rem;
   line-height: 1.75;
-  color: #94A3B8;
+  color: var(--text-muted);
   margin: 0;
 }
 
 .service-row-arrow {
   justify-self: end;
-  color: #64748B;
+  color: var(--text-subtle);
   font-size: 1.1rem;
   transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .editorial-service-row:hover .service-row-arrow {
-  color: #F8FAFC;
+  color: var(--accent-primary);
   transform: translate(3px, -3px);
 }
 
@@ -86,13 +82,13 @@
 .editorial-process-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--hairline-strong);
+  border-bottom: 1px solid var(--hairline-strong);
 }
 
 .editorial-process-col {
   padding: 36px 24px;
-  border-inline-end: 1px solid rgba(255, 255, 255, 0.08);
+  border-inline-end: 1px solid var(--hairline);
   text-align: start;
 }
 
@@ -103,22 +99,23 @@
 .process-col-num {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: #64748B;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-primary);
   margin-bottom: 16px;
 }
 
 .editorial-process-col h4 {
   font-size: 1.12rem;
   font-weight: 700;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin-bottom: 10px;
 }
 
 .editorial-process-col p {
   font-size: 0.92rem;
   line-height: 1.75;
-  color: #94A3B8;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -144,7 +141,7 @@
 
   .editorial-process-col {
     border-inline-end: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--hairline);
     padding: 24px 0;
   }
 }
