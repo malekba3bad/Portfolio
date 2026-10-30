@@ -135,6 +135,24 @@
 }
 
 @media (max-width: 575px) {
+  .services-section {
+    padding: 96px 0 64px;
+  }
+
+  .editorial-service-row {
+    grid-template-columns: 32px 1fr 22px;
+    gap: 8px;
+    padding: 20px 4px;
+  }
+
+  .service-row-title {
+    font-size: 1.08rem;
+  }
+
+  .service-row-desc {
+    font-size: 0.9rem;
+  }
+
   .editorial-process-strip {
     grid-template-columns: 1fr;
   }

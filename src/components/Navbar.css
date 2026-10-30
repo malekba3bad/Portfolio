@@ -280,3 +280,30 @@
     text-decoration: none !important;
   }
 }
+
+@media (max-width: 767px) {
+  .editorial-header {
+    height: 66px;
+  }
+
+  .editorial-header__inner {
+    padding: 0 1rem;
+  }
+
+  .editorial-action-link,
+  .editorial-action-cta,
+  .editorial-header__actions .editorial-divider-v:nth-of-type(2) {
+    display: none;
+  }
+
+  .editorial-header__actions {
+    gap: 0.75rem;
+  }
+
+  .editorial-mobile-menu {
+    top: 66px;
+    padding: 1.25rem 1rem;
+    max-height: calc(100vh - 66px);
+    overflow-y: auto;
+  }
+}

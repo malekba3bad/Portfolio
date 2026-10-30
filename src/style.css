@@ -1497,6 +1497,34 @@ html[data-theme="dusk"] .client-minimal-icon--invert-dusk {
 
 @media (max-width: 575px) {
   .clients-minimal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-minimal-cell {
+    padding: 20px 8px;
+    gap: 10px;
+  }
+
+  .client-minimal-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .client-minimal-name {
+    font-size: 0.88rem;
+  }
+
+  .client-minimal-cell:nth-child(n + 1) {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .client-minimal-cell:nth-child(n + 11) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .clients-minimal-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1506,5 +1534,212 @@ html[data-theme="dusk"] .client-minimal-icon--invert-dusk {
 
   .client-minimal-cell:last-child {
     border-bottom: none;
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE BREAKPOINTS (TABLET, MOBILE & SMALL SCREENS)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .home-section {
+    padding-top: 104px;
+    padding-bottom: 28px;
+  }
+
+  .hero-sphere-wrapper {
+    max-width: 360px;
+    height: 340px;
+    margin: 0 auto;
+  }
+
+  .hero-sphere-warm-aura {
+    width: 240px;
+    height: 240px;
+  }
+
+  .editorial-stats-strip {
+    margin-top: 2.5rem;
+  }
+
+  .editorial-portrait-wrap {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .route-transition-hairline {
+    top: 66px;
+  }
+
+  .home-section {
+    padding-top: 90px;
+  }
+
+  .home-content {
+    padding-top: 1rem;
+  }
+
+  .editorial-hero-title {
+    font-size: clamp(2.15rem, 8vw, 2.85rem);
+  }
+
+  .editorial-hero-lead {
+    font-size: 0.98rem;
+  }
+
+  .editorial-hero-actions {
+    gap: 1.25rem;
+  }
+
+  .hero-sphere-wrapper {
+    max-width: 300px;
+    height: 280px;
+  }
+
+  .editorial-stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    padding: 0;
+  }
+
+  .editorial-stat-item {
+    padding: 20px 12px;
+    border-inline-end: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .editorial-stat-item:nth-child(2n) {
+    border-inline-end: none;
+  }
+
+  .editorial-stat-item:nth-child(n + 3) {
+    border-bottom: none;
+  }
+
+  .featured-projects-section,
+  .home-services-preview,
+  .home-about-section,
+  .clients-minimal-section {
+    padding: 48px 0;
+  }
+
+  .project-section,
+  .about-section,
+  .resume-section {
+    padding-top: 96px;
+    padding-bottom: 60px;
+  }
+
+  .editorial-section-header {
+    padding-top: 20px;
+    padding-bottom: 28px;
+    gap: 14px;
+  }
+
+  /* Touch-scrollable Filter Tabs on Mobile */
+  .editorial-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .editorial-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.35rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--hairline);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .editorial-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .editorial-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-bottom: 10px;
+  }
+
+  .editorial-search-field {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .editorial-contact-block {
+    margin-top: 56px;
+    padding-top: 42px;
+  }
+
+  .footer-copywright,
+  .footer-body {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-editorial-solid {
+    padding: 0.78rem 1.4rem;
+    font-size: 0.88rem;
+  }
+
+  .editorial-project-title {
+    font-size: 1.2rem;
+  }
+
+  /* Project Modal Mobile Optimization */
+  .project-modal-backdrop {
+    padding: 10px;
+  }
+
+  .project-modal-dialog {
+    max-height: 93vh;
+    border-radius: 12px;
+  }
+
+  .project-modal-topbar {
+    padding: 12px 14px;
+  }
+
+  .modal-kicker {
+    display: none;
+  }
+
+  .modal-index-counter {
+    border-inline-end: none;
+    padding-inline-end: 0;
+  }
+
+  .project-modal-content {
+    padding: 20px 16px;
+  }
+
+  .project-modal-title {
+    font-size: 1.32rem;
+  }
+
+  .editorial-timeline-wrap {
+    padding-inline-start: 18px;
+  }
+
+  .editorial-tech-ledger {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ledger-item {
+    padding: 14px 10px;
+    gap: 10px;
+  }
+
+  .ledger-name {
+    font-size: 0.8rem;
+  }
+
+  .resume-pdf-frame {
+    padding: 10px 6px;
   }
 }

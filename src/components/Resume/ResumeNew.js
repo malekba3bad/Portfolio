@@ -58,7 +58,15 @@ function ResumeNew() {
             >
               <Page
                 pageNumber={1}
-                scale={width > 992 ? 1.5 : width > 768 ? 1.1 : 0.58}
+                scale={
+                  width > 1200
+                    ? 1.45
+                    : width > 991
+                    ? 1.15
+                    : width > 767
+                    ? 0.92
+                    : Math.max(0.42, (width - 56) / 612)
+                }
               />
             </Document>
           </div>
