@@ -136,7 +136,11 @@
       "sourceCode": "Source Code (GitHub)",
       "privateNote": "This system is a private internal enterprise application. Live public access is restricted to protect institutional data.",
       "close": "Close Modal",
-      "viewDetails": "Case Study"
+      "viewDetails": "Case Study",
+      "prevProject": "Previous Project",
+      "nextProject": "Next Project",
+      "keyboardHint": "Use ← → arrow keys to switch projects",
+      "toggleZoom": "Click image to toggle full-screen fit"
     },
     "arabwd": {
       "title": "ArabWare Dos Software Company",

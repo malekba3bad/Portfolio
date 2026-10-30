@@ -8,13 +8,13 @@ import "./i18n";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 
@@ -38,18 +38,19 @@ function App() {
       <Router>
         <div className="App" id="scroll">
           <Navbar />
-          <ScrollToTop />
           <Suspense fallback={<RouteFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/project" element={<Projects />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/Services" element={<Services />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
+            <PageTransition>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/project" element={<Projects />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/Services" element={<Services />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </PageTransition>
           </Suspense>
           <Footer />
         </div>

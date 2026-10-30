@@ -148,6 +148,8 @@ function Projects() {
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
+          projectsList={filteredProjects}
+          onSelectProject={setSelectedProject}
           onClose={() => setSelectedProject(null)}
         />
       )}

@@ -334,6 +334,8 @@ function Home2() {
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
+          projectsList={featuredProjects}
+          onSelectProject={setSelectedProject}
           onClose={() => setSelectedProject(null)}
         />
       )}
