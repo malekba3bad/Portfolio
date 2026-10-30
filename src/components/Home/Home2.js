@@ -5,6 +5,7 @@ import myImg from "../../Assets/avatar.webp";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "../Projects/ProjectCards";
 import ProjectModal from "../Projects/ProjectModal";
+import ClientsSection from "./ClientsSection";
 import { PROJECTS_DATA } from "../../data/projectsData";
 import { BsArrowUpRight } from "react-icons/bs";
 import gsap from "gsap";
@@ -89,14 +90,19 @@ function Home2() {
   return (
     <div ref={sectionsRef} className="home-integrated-sections">
       {/* =========================================================
-          01. SELECTED FLAGSHIP WORKS (Borderless Editorial Gallery)
+          01. OFFICIAL CLIENTS & INSTITUTIONS SHOWCASE + LOGO RIBBON
+         ========================================================= */}
+      <ClientsSection onSelectProject={setSelectedProject} />
+
+      {/* =========================================================
+          02. SELECTED FLAGSHIP WORKS (Borderless Editorial Gallery)
          ========================================================= */}
       <section className="featured-projects-section" id="featured-projects">
         <Container>
           <div className="editorial-section-header reveal-block">
             <div className="editorial-header-left">
               <span className="editorial-index">
-                01 — {t("home.featuredSection.eyebrow")}
+                02 — {t("home.featuredSection.eyebrow")}
               </span>
               <h2 className="editorial-section-title">
                 {t("home.featuredSection.title")}{" "}
@@ -145,14 +151,14 @@ function Home2() {
       </section>
 
       {/* =========================================================
-          02. CAPABILITIES & SERVICES (Interactive Hairline List)
+          03. CAPABILITIES & SERVICES (Interactive Hairline List)
          ========================================================= */}
       <section className="home-services-preview">
         <Container>
           <div className="editorial-section-header reveal-block">
             <div className="editorial-header-left">
               <span className="editorial-index">
-                02 — {t("home.servicesPreview.eyebrow")}
+                03 — {t("home.servicesPreview.eyebrow")}
               </span>
               <h2 className="editorial-section-title">
                 {t("home.servicesPreview.title")}{" "}
@@ -194,14 +200,14 @@ function Home2() {
       </section>
 
       {/* =========================================================
-          03. ENGINEER PROFILE & SPECIFICATION MATRIX
+          04. ENGINEER PROFILE & SPECIFICATION MATRIX
          ========================================================= */}
       <section className="home-about-section" id="about">
         <Container>
           <div className="editorial-section-header reveal-block">
             <div className="editorial-header-left">
               <span className="editorial-index">
-                03 — {t("home.skillsPreview.eyebrow")}
+                04 — {t("home.skillsPreview.eyebrow")}
               </span>
               <h2 className="editorial-section-title">
                 {t("home2.introduction")} {t("home2.intro_bold")}
@@ -260,11 +266,11 @@ function Home2() {
           </div>
 
           {/* =========================================================
-              04. OPEN EDITORIAL CONTACT STATEMENT
+              05. OPEN EDITORIAL CONTACT STATEMENT
              ========================================================= */}
           <div className="editorial-contact-block reveal-block">
             <span className="editorial-index">
-              04 — {t("home.ctaBanner.badge")}
+              05 — {t("home.ctaBanner.badge")}
             </span>
             <h2 className="editorial-contact-heading">
               {t("home.ctaBanner.title")}{" "}
@@ -334,7 +340,7 @@ function Home2() {
       {selectedProject && (
         <ProjectModal
           project={selectedProject}
-          projectsList={featuredProjects}
+          projectsList={PROJECTS_DATA}
           onSelectProject={setSelectedProject}
           onClose={() => setSelectedProject(null)}
         />

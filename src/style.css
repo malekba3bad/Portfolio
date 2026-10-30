@@ -1292,3 +1292,150 @@
   color: var(--accent-primary);
   transform: translateY(-2px);
 }
+
+/* ==========================================================================
+   MINIMALIST CLIENTS & PARTNERS SECTION (SPLIT HEADING + 3x4 LOGO GRID)
+   ========================================================================== */
+.clients-minimal-section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--hairline-strong);
+}
+
+.clients-minimal-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: stretch;
+}
+
+.clients-minimal-heading-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline-end: 44px;
+  text-align: start;
+}
+
+.clients-minimal-title {
+  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.38;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.clients-minimal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-inline-start: 1px solid var(--hairline-strong);
+  padding-inline-start: 36px;
+}
+
+.client-minimal-cell {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--hairline);
+  padding: 28px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  text-align: start;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Remove bottom hairline on the last row (items 9..12 in 4-col grid) */
+.client-minimal-cell:nth-child(n + 9) {
+  border-bottom: none;
+}
+
+.client-minimal-cell:hover {
+  transform: translateY(-2px);
+}
+
+.client-minimal-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+html[data-theme="dusk"] .client-minimal-icon--invert-dusk {
+  filter: brightness(0) invert(1);
+}
+
+.client-minimal-cell:hover .client-minimal-icon {
+  transform: scale(1.08);
+}
+
+.client-minimal-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.client-minimal-cell:hover .client-minimal-name {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1199px) {
+  .clients-minimal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .client-minimal-cell:nth-child(n + 9) {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .client-minimal-cell:nth-child(n + 10) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .clients-minimal-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .clients-minimal-heading-col {
+    padding-inline-end: 0;
+  }
+
+  .clients-minimal-title br {
+    display: none;
+  }
+
+  .clients-minimal-grid {
+    border-inline-start: none;
+    border-top: 1px solid var(--hairline-strong);
+    padding-inline-start: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-minimal-cell:nth-child(n + 1) {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .client-minimal-cell:nth-child(n + 11) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .clients-minimal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-minimal-cell:nth-child(n + 1) {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .client-minimal-cell:last-child {
+    border-bottom: none;
+  }
+}
