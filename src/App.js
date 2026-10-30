@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
 import PageTransition from "./components/PageTransition";
+import SEOHead from "./components/SEOHead";
 import {
   BrowserRouter as Router,
   Route,
@@ -36,6 +37,7 @@ function App() {
   return (
     <I18nextProvider i18n={i18n}>
       <Router>
+        <SEOHead />
         <div className="App" id="scroll">
           <Navbar />
           <Suspense fallback={<RouteFallback />}>

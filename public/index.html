@@ -1,41 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl" data-theme="sunlit">
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#FAF7F2" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>Malek Ba Abbad | Senior Front-End & Full-Stack Engineer</title>
-  <meta name="keywords" content="مالك باعباد, Malek Ba Abbad, باعباد, React, Next.js, TypeScript, Front-End Engineer, Full-Stack Developer, FinTech, UI/UX, Yemen" />
-  <meta name="description" content="Malek Ba Abbad — Front-End & Web Application Engineer with 5+ years of experience crafting high-performance FinTech platforms, enterprise dashboards, and modern web experiences." />
+  <meta name="author" content="Malek Ba Abbad — مالك باعباد" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-  <!-- Preconnect & Modern Typography (IBM Plex Sans Arabic + Plus Jakarta Sans + JetBrains Mono) -->
+  <!-- Icons & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="%PUBLIC_URL%/favicon.png" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="canonical" href="https://malekba3bad.vercel.app/" />
+
+  <!-- Primary Bilingual Title & Description -->
+  <title>مالك باعباد | Malek Ba Abbad — مهندس واجهات وتطبيقات ويب (Senior Front-End & Full-Stack Engineer)</title>
+  <meta name="description" content="مالك باعباد (Malek Ba Abbad) — مهندس واجهات وتطبيقات ويب بخبرة تزيد عن 5 سنوات في هندسة المنصات البنكية والمالية (FinTech)، أنظمة الشركات (ERP)، وتطبيقات React.js و Next.js و Laravel فائقة السرعة." />
+  <meta name="keywords" content="مالك باعباد, Malek Ba Abbad, مهندس برمجيات, مطور واجهات أمامية, مطور ويب, React.js, Next.js, TypeScript, Laravel, FinTech, أنظمة بنكية, تصميم واجهات, حضرموت, اليمن, Senior Front-End Engineer, Full-Stack Developer" />
+
+  <!-- Preconnect & Editorial Typography (IBM Plex Sans Arabic + Plus Jakarta Sans + JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="Malek Ba Abbad | Portfolio" />
-  <meta itemprop="description" content="Front-End & Web Application Engineer with 5+ years of experience building FinTech platforms, enterprise dashboards, and interactive web applications." />
-  <meta itemprop="image" content="https://malekba3bad.vercel.app/static/media/avatar.c85b12b81116b0890ccc.png" />
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://malekba3bad.vercel.app" />
+  <!-- OpenGraph Meta Tags (WhatsApp, LinkedIn, Facebook, Telegram) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Malek Ba Abbad | Senior Front-End Engineer" />
-  <meta property="og:description" content="Front-End & Web Application Engineer with 5+ years of experience building FinTech platforms, enterprise dashboards, and interactive web applications." />
-  <meta property="og:image" content="https://malekba3bad.vercel.app/static/media/avatar.c85b12b81116b0890ccc.png" />
+  <meta property="og:url" content="https://malekba3bad.vercel.app/" />
+  <meta property="og:site_name" content="Malek Ba Abbad | مالك باعباد" />
+  <meta property="og:locale" content="ar_YE" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="مالك باعباد | Malek Ba Abbad — Senior Front-End & Full-Stack Engineer" />
+  <meta property="og:description" content="هندسة وتطوير المنصات البنكية والمالية (FinTech)، أنظمة إدارة الموارد (ERP)، وتجارب الويب التفاعلية باستخدام React.js و Next.js و Laravel — أكثر من 19 نظاماً ومنصة رقمية منجزة." />
+  <meta property="og:image" content="https://malekba3bad.vercel.app/og-cover.png" />
+  <meta property="og:image:secure_url" content="https://malekba3bad.vercel.app/og-cover.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Malek Ba Abbad — Senior Front-End & Full-Stack Web Engineer Portfolio" />
 
-  <!-- Twitter Meta Tags -->
+  <!-- Twitter / X Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Malek Ba Abbad | Senior Front-End Engineer" />
-  <meta name="twitter:description" content="Front-End & Web Application Engineer with 5+ years of experience building FinTech platforms, enterprise dashboards, and interactive web applications." />
-  <meta name="twitter:image" content="https://malekba3bad.vercel.app/static/media/avatar.c85b12b81116b0890ccc.png" />
+  <meta name="twitter:site" content="@MalikAl3bbadi" />
+  <meta name="twitter:creator" content="@MalikAl3bbadi" />
+  <meta name="twitter:title" content="مالك باعباد | Malek Ba Abbad — Senior Front-End & Full-Stack Engineer" />
+  <meta name="twitter:description" content="هندسة وتطوير المنصات البنكية والمالية (FinTech)، أنظمة الشركات (ERP)، وتطبيقات React.js و Next.js و Laravel فائقة السرعة." />
+  <meta name="twitter:image" content="https://malekba3bad.vercel.app/og-cover.png" />
+  <meta name="twitter:image:alt" content="Malek Ba Abbad — Software Engineering Portfolio" />
+
+  <!-- Schema.org Google Search Structured Data -->
+  <meta itemprop="name" content="مالك باعباد | Malek Ba Abbad — Senior Front-End & Full-Stack Engineer" />
+  <meta itemprop="description" content="مهندس واجهات وتطبيقات ويب بخبرة +5 سنوات في بناء الأنظمة البنكية والمالية (FinTech) ولوحات التحكم المؤسسية وتطبيقات React و Next.js و Laravel." />
+  <meta itemprop="image" content="https://malekba3bad.vercel.app/og-cover.png" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://malekba3bad.vercel.app/#person",
+          "name": "Malek Ba Abbad",
+          "alternateName": ["مالك باعباد", "Malik Baabbad"],
+          "url": "https://malekba3bad.vercel.app/",
+          "image": "https://malekba3bad.vercel.app/og-cover.png",
+          "jobTitle": "Senior Front-End & Full-Stack Web Engineer",
+          "description": "Front-End & Full-Stack Web Application Engineer with 5+ years of experience building FinTech platforms, Islamic banking portals, enterprise ERP systems, and high-performance web applications.",
+          "knowsAbout": [
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "JavaScript (ES6+)",
+            "Laravel",
+            "Tailwind CSS",
+            "Three.js",
+            "GSAP",
+            "FinTech & Banking Systems",
+            "Enterprise ERP & HRMS",
+            "UI/UX Architecture"
+          ],
+          "sameAs": [
+            "https://github.com/malekba3bad",
+            "https://www.linkedin.com/in/malik-baabbad/",
+            "https://x.com/MalikAl3bbadi",
+            "https://www.instagram.com/97.oi"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://malekba3bad.vercel.app/#website",
+          "url": "https://malekba3bad.vercel.app/",
+          "name": "Malek Ba Abbad | مالك باعباد — Software Engineering Portfolio",
+          "inLanguage": ["ar", "en"],
+          "publisher": {
+            "@id": "https://malekba3bad.vercel.app/#person"
+          }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://malekba3bad.vercel.app/#profilepage",
+          "url": "https://malekba3bad.vercel.app/",
+          "name": "مالك باعباد | Malek Ba Abbad — معرض الأعمال والأنظمة الرقمية",
+          "mainEntity": {
+            "@id": "https://malekba3bad.vercel.app/#person"
+          }
+        }
+      ]
+    }
+  </script>
 </head>
 
 <body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 </body>
 
