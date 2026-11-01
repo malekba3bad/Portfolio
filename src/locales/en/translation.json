@@ -43,7 +43,7 @@
       "viewAll": "Explore All Services in Detail"
     },
     "skillsPreview": {
-      "eyebrow": "Technical Arsenal",
+      "eyebrow": "Professional Career and Skills",
       "title": "Core Stack &",
       "titleHighlight": "Ecosystem",
       "subtitle": "Powered by React, Next.js, TypeScript, and modern styling architectures to deliver production-grade software.",
@@ -53,7 +53,7 @@
       "badge": "Have an upcoming project?",
       "title": "Let's turn your vision into an",
       "titleHighlight": "exceptional digital product",
-      "description": "Whether you need a FinTech platform, an enterprise dashboard, or a complete UI/UX & performance overhaul — I'm ready to help you ship with confidence.",
+      "description": "Whether you need a official website, an enterprise dashboard, or a complete UI/UX & performance overhaul — I'm ready to help you ship with confidence.",
       "whatsapp": "Chat on WhatsApp",
       "viewProjects": "Browse All Works"
     },
@@ -115,7 +115,7 @@
     "allCategories": "All",
     "categories": {
       "all": "All Projects",
-      "fintech": "FinTech & Banking",
+      "fintech": "FinTech & Banking Websites",
       "enterprise": "Dashboards & ERP",
       "corporate": "Corporate & Portals",
       "webapps": "Web Apps & Tools"

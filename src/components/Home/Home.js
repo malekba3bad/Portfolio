@@ -75,9 +75,9 @@ function Home() {
                 {t("home.roleTitle")}
               </h2>
 
-              <p className="hero-animate-item editorial-hero-lead">
+              {/* <p className="hero-animate-item editorial-hero-lead">
                 {t("home.subtitle")}
-              </p>
+              </p> */}
 
               {/* Borderless Inline Typewriter Specialization */}
               <div className="hero-animate-item editorial-typewriter-row">
@@ -128,7 +128,7 @@ function Home() {
           </Row>
 
           {/* Open Architectural Hairline Metrics Strip (Zero Boxes) */}
-          <div className="editorial-stats-strip">
+          {/* <div className="editorial-stats-strip">
             <div className="editorial-stat-item">
               <span className="editorial-stat-num">{t("home.stats.years")}</span>
               <span className="editorial-stat-label">
@@ -159,7 +159,7 @@ function Home() {
                 {t("home.stats.performanceLabel")}
               </span>
             </div>
-          </div>
+          </div> */}
         </Container>
       </section>
 

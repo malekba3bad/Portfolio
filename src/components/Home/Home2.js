@@ -20,25 +20,16 @@ function Home2() {
 
   const inquiryScopes = [
     {
-      id: "fintech",
-      ar: "منصة بنكية / مالية (FinTech)",
-      en: "FinTech & Banking Platform",
-    },
-    {
-      id: "erp",
-      ar: "نظام مؤسسي / لوحة تحكم (ERP)",
-      en: "Enterprise ERP & Dashboard",
-    },
-    {
-      id: "webapp",
-      ar: "تطبيق ويب (React / Next.js / Laravel)",
-      en: "Full-Stack Web App (React / Next.js)",
-    },
-    {
       id: "corporate",
       ar: "موقع رسمي لشركة أو مؤسسة",
       en: "Corporate & Official Portal",
     },
+    {
+      id: "erp",
+      ar: "نظام مؤسسي / لوحة تحكم",
+      en: "Enterprise ERP & Dashboard",
+    },
+    
     {
       id: "uiux",
       ar: "تطوير واجهات واستشارة تقنية",
@@ -156,9 +147,9 @@ function Home2() {
               </h2>
             </div>
             <div className="editorial-header-right">
-              <p className="editorial-section-desc">
+              {/* <p className="editorial-section-desc">
                 {t("home.featuredSection.subtitle")}
-              </p>
+              </p> */}
               <Link to="/project" className="link-editorial mt-2">
                 <span>{t("home.featuredSection.viewAll")}</span>
                 <BsArrowUpRight />
@@ -212,9 +203,9 @@ function Home2() {
               </h2>
             </div>
             <div className="editorial-header-right">
-              <p className="editorial-section-desc">
+              {/* <p className="editorial-section-desc">
                 {t("home.servicesPreview.subtitle")}
-              </p>
+              </p> */}
               <Link to="/Services" className="link-editorial mt-2">
                 <span>{t("home.servicesPreview.viewAll")}</span>
                 <BsArrowUpRight />

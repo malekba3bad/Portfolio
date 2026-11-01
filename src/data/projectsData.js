@@ -117,7 +117,7 @@ export const PROJECTS_DATA = [
     category: "enterprise",
     featured: true,
     bentoSpan: "normal",
-    status: "enterprise",
+    status: "live",
     accent: "cyan",
     techStack: ["React.js", "TypeScript", "Tailwind CSS", "Data Tables", "Analytics"],
     role: {
@@ -199,7 +199,7 @@ export const PROJECTS_DATA = [
     imgPath: Balleghny,
     category: "enterprise",
     featured: false,
-    status: "enterprise",
+    status: "live",
     accent: "cyan",
     techStack: ["React.js", "Tailwind CSS", "Charts", "Auth", "REST API"],
     role: {
@@ -225,7 +225,7 @@ export const PROJECTS_DATA = [
     imgPath: Inventory,
     category: "enterprise",
     featured: false,
-    status: "enterprise",
+    status: "live",
     accent: "cyan",
     techStack: ["JavaScript", "Bootstrap", "Data Tables", "Reports"],
     role: {
@@ -386,7 +386,7 @@ export const PROJECTS_DATA = [
     imgPath: Dalil,
     category: "enterprise",
     featured: false,
-    status: "enterprise",
+    status: "live",
     accent: "cyan",
     techStack: ["React.js", "Instant Search", "Multi-Filters", "Directory UI"],
     role: {

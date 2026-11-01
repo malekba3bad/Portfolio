@@ -32,16 +32,16 @@ function ClientsSection({ onSelectProject }) {
                 <>
                   موثوق من قِبل
                   <br />
-                  عملائنا وشركاء
-                  <br />
+                  شركاء
+                 
                   النجاح
                 </>
               ) : (
                 <>
                   Trusted by our
                   <br />
-                  customers &amp;
-                  <br />
+                  
+                  
                   partners
                 </>
               )}
