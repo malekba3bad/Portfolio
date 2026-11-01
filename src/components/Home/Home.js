@@ -61,10 +61,10 @@ function Home() {
           <Row className="align-items-center gy-5">
             <Col lg={7} className="home-header">
               {/* Minimalist Editorial Index + Status */}
-              <div className="hero-animate-item editorial-kicker">
+         {/*      <div className="hero-animate-item editorial-kicker">
                 <span className="kicker-live-dot" />
                 <span>00 — {t("home.badge")}</span>
-              </div>
+           /div>
 
               {/* Commanding Single-Tone Display Name */}
               <h1 className="hero-animate-item editorial-hero-title">
