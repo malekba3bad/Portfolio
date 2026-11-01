@@ -321,9 +321,7 @@ function Home2() {
                   {t("home.ctaBanner.title")}{" "}
                   <span>{t("home.ctaBanner.titleHighlight")}</span>
                 </h2>
-                <p className="editorial-contact-desc">
-                  {t("home.ctaBanner.description")}
-                </p>
+               
 
                 {/* Minimalist Quick Project Inquiry Selector */}
                 <div className="quick-inquiry-wrap">

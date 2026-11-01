@@ -34,9 +34,7 @@ function ClientsSection({ onSelectProject }) {
                 {t("home.clientsSection.titleHighlight")}
               </span>
             </h2>
-            <p className="clients-minimal-subtitle">
-              {t("home.clientsSection.subtitle")}
-            </p>
+            
           </div>
 
           {/* 3x4 Minimalist Logo Grid (Horizontal row hairlines only) */}
