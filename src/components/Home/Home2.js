@@ -8,7 +8,7 @@ import ProjectModal from "../Projects/ProjectModal";
 import ClientsSection from "./ClientsSection";
 import ContactCompanion3D from "./ContactCompanion3D";
 import { PROJECTS_DATA } from "../../data/projectsData";
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsWhatsapp } from "react-icons/bs";
 import gsap from "gsap";
 
 function Home2() {
@@ -352,6 +352,11 @@ function Home2() {
                       className="quick-inquiry-input"
                       value={briefNote}
                       onChange={(e) => setBriefNote(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          window.open(whatsappHref, "_blank", "noopener,noreferrer");
+                        }
+                      }}
                       placeholder={
                         isRTL
                           ? "اسم الجهة أو ملاحظة مختصرة عن المشروع (اختياري)..."
@@ -363,61 +368,16 @@ function Home2() {
                           : "Company name or brief note"
                       }
                     />
+                    <a
+                      href={whatsappHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-editorial-solid quick-inquiry-btn"
+                    >
+                      <BsWhatsapp className="quick-whatsapp-icon" />
+                      <span>{t("home.ctaBanner.whatsapp")}</span>
+                    </a>
                   </div>
-                </div>
-
-                <div className="editorial-contact-actions">
-                  <a
-                    href={whatsappHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-editorial-solid"
-                  >
-                    <span>{t("home.ctaBanner.whatsapp")}</span>
-                    <BsArrowUpRight />
-                  </a>
-                  <Link to="/project" className="link-editorial">
-                    <span>{t("home.ctaBanner.viewProjects")}</span>
-                    <BsArrowUpRight />
-                  </Link>
-                </div>
-
-                <div className="editorial-social-strip">
-                  <a
-                    href="https://github.com/malekba3bad"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    GitHub ↗
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/malik-baabbad/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    LinkedIn ↗
-                  </a>
-                  <a
-                    href="https://x.com/MalikAl3bbadi"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    X (Twitter) ↗
-                  </a>
-                  <a
-                    href="https://www.instagram.com/97.oi"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Instagram ↗
-                  </a>
-                  <a
-                    href="https://wa.me/+967773250384"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    WhatsApp ↗
-                  </a>
                 </div>
               </div>
 
