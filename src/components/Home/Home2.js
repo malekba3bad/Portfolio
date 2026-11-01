@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import ProjectCard from "../Projects/ProjectCards";
 import ProjectModal from "../Projects/ProjectModal";
 import ClientsSection from "./ClientsSection";
+import ContactCompanion3D from "./ContactCompanion3D";
 import { PROJECTS_DATA } from "../../data/projectsData";
 import { BsArrowUpRight } from "react-icons/bs";
 import gsap from "gsap";
@@ -17,6 +18,8 @@ function Home2() {
   const [selectedScope, setSelectedScope] = useState("fintech");
   const [briefNote, setBriefNote] = useState("");
   const sectionsRef = useRef(null);
+  const contactZoneRef = useRef(null);
+  const briefInputRef = useRef(null);
 
   const inquiryScopes = [
     {
@@ -305,112 +308,131 @@ function Home2() {
           {/* =========================================================
               05. OPEN EDITORIAL CONTACT STATEMENT
              ========================================================= */}
-          <div className="editorial-contact-block reveal-block">
-            <span className="editorial-index">
-              05 — {t("home.ctaBanner.badge")}
-            </span>
-            <h2 className="editorial-contact-heading">
-              {t("home.ctaBanner.title")}{" "}
-              <span>{t("home.ctaBanner.titleHighlight")}</span>
-            </h2>
-            <p className="editorial-contact-desc">
-              {t("home.ctaBanner.description")}
-            </p>
+          <div
+            ref={contactZoneRef}
+            className="editorial-contact-block reveal-block"
+          >
+            <div className="editorial-contact-grid">
+              <div className="editorial-contact-main">
+                <span className="editorial-index">
+                  05 — {t("home.ctaBanner.badge")}
+                </span>
+                <h2 className="editorial-contact-heading">
+                  {t("home.ctaBanner.title")}{" "}
+                  <span>{t("home.ctaBanner.titleHighlight")}</span>
+                </h2>
+                <p className="editorial-contact-desc">
+                  {t("home.ctaBanner.description")}
+                </p>
 
-            {/* Minimalist Quick Project Inquiry Selector */}
-            <div className="quick-inquiry-wrap">
-              <span className="quick-inquiry-label">
-                {isRTL
-                  ? "حدد نوع المشروع لتجهيز رسالة تواصل مباشرة:"
-                  : "Select your project scope to prepare a direct message:"}
-              </span>
-              <div className="quick-inquiry-scopes" role="group">
-                {inquiryScopes.map((scope) => (
-                  <button
-                    key={scope.id}
-                    type="button"
-                    className={`quick-scope-btn ${
-                      selectedScope === scope.id ? "is-selected" : ""
-                    }`}
-                    onClick={() => setSelectedScope(scope.id)}
+                {/* Minimalist Quick Project Inquiry Selector */}
+                <div className="quick-inquiry-wrap">
+                  <span className="quick-inquiry-label">
+                    {isRTL
+                      ? "حدد نوع المشروع لتجهيز رسالة تواصل مباشرة:"
+                      : "Select your project scope to prepare a direct message:"}
+                  </span>
+                  <div className="quick-inquiry-scopes" role="group">
+                    {inquiryScopes.map((scope) => (
+                      <button
+                        key={scope.id}
+                        type="button"
+                        className={`quick-scope-btn ${
+                          selectedScope === scope.id ? "is-selected" : ""
+                        }`}
+                        onClick={() => setSelectedScope(scope.id)}
+                      >
+                        {isRTL ? scope.ar : scope.en}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="quick-inquiry-input-wrap">
+                    <input
+                      ref={briefInputRef}
+                      type="text"
+                      className="quick-inquiry-input"
+                      value={briefNote}
+                      onChange={(e) => setBriefNote(e.target.value)}
+                      placeholder={
+                        isRTL
+                          ? "اسم الجهة أو ملاحظة مختصرة عن المشروع (اختياري)..."
+                          : "Company name or brief note about your project (optional)..."
+                      }
+                      aria-label={
+                        isRTL
+                          ? "اسم الجهة أو ملاحظة مختصرة"
+                          : "Company name or brief note"
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div className="editorial-contact-actions">
+                  <a
+                    href={whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-editorial-solid"
                   >
-                    {isRTL ? scope.ar : scope.en}
-                  </button>
-                ))}
+                    <span>{t("home.ctaBanner.whatsapp")}</span>
+                    <BsArrowUpRight />
+                  </a>
+                  <Link to="/project" className="link-editorial">
+                    <span>{t("home.ctaBanner.viewProjects")}</span>
+                    <BsArrowUpRight />
+                  </Link>
+                </div>
+
+                <div className="editorial-social-strip">
+                  <a
+                    href="https://github.com/malekba3bad"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub ↗
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/malik-baabbad/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn ↗
+                  </a>
+                  <a
+                    href="https://x.com/MalikAl3bbadi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    X (Twitter) ↗
+                  </a>
+                  <a
+                    href="https://www.instagram.com/97.oi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram ↗
+                  </a>
+                  <a
+                    href="https://wa.me/+967773250384"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    WhatsApp ↗
+                  </a>
+                </div>
               </div>
 
-              <div className="quick-inquiry-input-wrap">
-                <input
-                  type="text"
-                  className="quick-inquiry-input"
-                  value={briefNote}
-                  onChange={(e) => setBriefNote(e.target.value)}
-                  placeholder={
-                    isRTL
-                      ? "اسم الجهة أو ملاحظة مختصرة عن المشروع (اختياري)..."
-                      : "Company name or brief note about your project (optional)..."
-                  }
-                  aria-label={
-                    isRTL
-                      ? "اسم الجهة أو ملاحظة مختصرة"
-                      : "Company name or brief note"
-                  }
+              {/* Interactive 3D companion reacting to pointer, scope & typing */}
+              <div className="editorial-contact-companion">
+                <ContactCompanion3D
+                  zoneRef={contactZoneRef}
+                  inputRef={briefInputRef}
+                  scope={selectedScope}
+                  note={briefNote}
+                  isRTL={isRTL}
                 />
               </div>
-            </div>
-
-            <div className="editorial-contact-actions">
-              <a
-                href={whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-editorial-solid"
-              >
-                <span>{t("home.ctaBanner.whatsapp")}</span>
-                <BsArrowUpRight />
-              </a>
-              <Link to="/project" className="link-editorial">
-                <span>{t("home.ctaBanner.viewProjects")}</span>
-                <BsArrowUpRight />
-              </Link>
-            </div>
-
-            <div className="editorial-social-strip">
-              <a
-                href="https://github.com/malekba3bad"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub ↗
-              </a>
-              <a
-                href="https://www.linkedin.com/in/malik-baabbad/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn ↗
-              </a>
-              <a
-                href="https://x.com/MalikAl3bbadi"
-                target="_blank"
-                rel="noreferrer"
-              >
-                X (Twitter) ↗
-              </a>
-              <a
-                href="https://www.instagram.com/97.oi"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Instagram ↗
-              </a>
-              <a
-                href="https://wa.me/+967773250384"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp ↗
-              </a>
             </div>
           </div>
         </Container>
