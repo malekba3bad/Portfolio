@@ -5,7 +5,7 @@ import clientsData from "../../data/clientsData";
 import { PROJECTS_DATA } from "../../data/projectsData";
 
 function ClientsSection({ onSelectProject }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
   const handleSelectClient = (client) => {
@@ -25,27 +25,18 @@ function ClientsSection({ onSelectProject }) {
           {/* Side Heading Column */}
           <div className="clients-minimal-heading-col">
             <span className="editorial-index">
-              {isRTL ? "01 — الشركاء" : "01 — PARTNERS"}
+              01 — {t("home.clientsSection.eyebrow")}
             </span>
             <h2 className="clients-minimal-title">
-              {isRTL ? (
-                <>
-                  موثوق من قِبل
-                  <br />
-                  شركاء
-                 
-                  النجاح
-                </>
-              ) : (
-                <>
-                  Trusted by our
-                  <br />
-                  
-                  
-                  partners
-                </>
-              )}
+              {t("home.clientsSection.title")}
+              <br />
+              <span className="clients-minimal-title-highlight">
+                {t("home.clientsSection.titleHighlight")}
+              </span>
             </h2>
+            <p className="clients-minimal-subtitle">
+              {t("home.clientsSection.subtitle")}
+            </p>
           </div>
 
           {/* 3x4 Minimalist Logo Grid (Horizontal row hairlines only) */}
