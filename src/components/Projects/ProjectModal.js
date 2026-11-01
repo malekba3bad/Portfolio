@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import { CgClose } from "react-icons/cg";
 import {
@@ -65,8 +66,17 @@ function ProjectModal({
 
   // Initial backdrop + dialog entrance
   useEffect(() => {
+    const scrollbarWidth =
+      typeof window !== "undefined"
+        ? window.innerWidth - document.documentElement.clientWidth
+        : 0;
+    const originalPaddingRight = document.body.style.paddingRight;
     const originalOverflow = document.body.style.overflow;
+
     document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
 
     if (overlayRef.current && dialogRef.current) {
       gsap.fromTo(
@@ -76,13 +86,21 @@ function ProjectModal({
       );
       gsap.fromTo(
         dialogRef.current,
-        { opacity: 0, y: 28 },
-        { opacity: 1, y: 0, duration: 0.38, ease: "power3.out" }
+        { opacity: 0, y: 24, scale: 0.98 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.35,
+          ease: "power3.out",
+          clearProps: "transform",
+        }
       );
     }
 
     return () => {
       document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
     };
   }, []);
 
@@ -131,7 +149,7 @@ function ProjectModal({
   const PrevArrow = isRTL ? BsArrowRight : BsArrowLeft;
   const NextArrow = isRTL ? BsArrowLeft : BsArrowRight;
 
-  return (
+  const modalContent = (
     <div
       ref={overlayRef}
       className="project-modal-backdrop"
@@ -280,11 +298,11 @@ function ProjectModal({
               </div>
             )}
 
-            {!project.demoLink && !project.ghLink && (
+            {/* {!project.demoLink && !project.ghLink && (
               <p className="project-private-note">
                 * {t("projects.modal.privateNote")}
               </p>
-            )}
+            )} */}
 
             {/* Next / Previous Project Switcher Footer */}
             {list.length > 1 && onSelectProject && prevProject && nextProject && (
@@ -321,6 +339,12 @@ function ProjectModal({
       </div>
     </div>
   );
+
+  if (typeof document === "undefined" || !document.body) {
+    return modalContent;
+  }
+
+  return createPortal(modalContent, document.body);
 }
 
 export default ProjectModal;

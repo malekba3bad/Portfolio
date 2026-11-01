@@ -54,7 +54,7 @@
 }
 
 .route-transition-stage {
-  will-change: opacity, transform;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -630,27 +630,41 @@
 .project-modal-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 3000;
-  background: rgba(20, 24, 36, 0.65);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 9999;
+  background: rgba(15, 18, 28, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .project-modal-dialog {
+  margin: auto;
   width: 100%;
-  max-width: 840px;
-  max-height: 90vh;
+  max-width: 860px;
+  max-height: calc(100vh - 48px);
+  max-height: calc(100dvh - 48px);
   display: flex;
   flex-direction: column;
   background: var(--bg-modal);
   border: 1px solid var(--hairline-strong);
   border-radius: 16px;
-  box-shadow: 0 32px 80px rgba(20, 24, 36, 0.28);
+  box-shadow: 0 32px 80px rgba(20, 24, 36, 0.32);
   overflow: hidden;
+  position: relative;
 }
 
 .project-modal-topbar {
@@ -659,6 +673,7 @@
   justify-content: space-between;
   padding: 16px 24px;
   border-bottom: 1px solid var(--hairline);
+  flex-shrink: 0;
 }
 
 .modal-topbar-meta {
@@ -733,7 +748,11 @@
 }
 
 .project-modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   text-align: start;
 }
 
@@ -1901,12 +1920,14 @@ html[data-theme="dusk"] .client-minimal-icon--invert-dusk {
 
   /* Project Modal Mobile Optimization */
   .project-modal-backdrop {
-    padding: 10px;
+    padding: 12px 10px;
   }
 
   .project-modal-dialog {
-    max-height: 93vh;
-    border-radius: 12px;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+    border-radius: 14px;
+    width: 100%;
   }
 
   .project-modal-topbar {
@@ -1922,12 +1943,31 @@ html[data-theme="dusk"] .client-minimal-icon--invert-dusk {
     padding-inline-end: 0;
   }
 
+  .project-modal-hero {
+    max-height: 240px;
+  }
+
+  .project-modal-img {
+    max-height: 240px;
+  }
+
   .project-modal-content {
-    padding: 20px 16px;
+    padding: 18px 14px;
+  }
+
+  .project-modal-header-row {
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 
   .project-modal-title {
-    font-size: 1.32rem;
+    font-size: 1.3rem;
+  }
+
+  .project-modal-actions {
+    width: 100%;
+    gap: 12px;
   }
 
   .editorial-timeline-wrap {

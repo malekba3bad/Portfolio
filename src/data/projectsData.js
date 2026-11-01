@@ -11,7 +11,7 @@ import ArabWD from "../Assets/Projects/ArabWD.webp";
 import SahelTeam from "../Assets/Projects/sahel.webp";
 import meoh from "../Assets/Projects/meoh.webp";
 import newBank from "../Assets/Projects/newBank.webp";
-import gold from "../Assets/Projects/gold.webp";
+// import gold from "../Assets/Projects/gold.webp";
 import port from "../Assets/Projects/port.webp";
 import prince from "../Assets/Projects/PRINCE_LINE.webp";
 import bindowalsolar from "../Assets/Projects/bindowalsolar.webp";
